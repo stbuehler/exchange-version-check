@@ -393,6 +393,11 @@ def run_check(args: argparse.Namespace):
 	if owa_version is None:
 		print(f"UNKNOWN: Missing X-OWA-Version response header for {url}|")
 		sys.exit(3)
+	# TODO: support other variants for finding the version
+	# - XML at http[s]://host/ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+	#   (<asmv1:assembly><assemblyIdentity version="...">)
+	# - Login page at /owa/auth/logon.aspx contains various "/owa/auth/A.B.C/..." references (but misses .D patch level)
+	# - https://www.msxfaq.de/exchange/update/exchange_build_nummer_ermitteln.htm
 	if trees:
 		version = trees.versions.get(owa_version, None)
 		version_name = version and version.name or 'Unknown exchange version'
