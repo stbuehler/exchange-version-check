@@ -405,7 +405,7 @@ def run_check(args: argparse.Namespace):
 	else:
 		print(f"CRITICAL: Version {owa_version} is outdated ({version_name})|")
 		print(f"Acceptable versions: {', '.join(alive_versions)}")
-		print("Also see: https://stbuehler.github.io/exchange-version-check/versions.html")
+		print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
 		sys.exit(2)
 
 
