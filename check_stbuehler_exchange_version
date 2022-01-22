@@ -79,10 +79,14 @@ class Version:
 
 	@staticmethod
 	def parse_line(line: str):
-		cols = line.removeprefix('|').removesuffix('|').split('|')
+		if line.startswith('|'):
+			line = line[1:]
+		if line.endswith('|'):
+			line = line[:-1]
+		cols = line.split('|')
 		name = cols[0].strip()
 		while name.startswith('&nbsp;'):
-			name = name.removeprefix('&nbsp;').lstrip()
+			name = name[len('&nbsp;'):].lstrip()
 		html_name: typing.Optional[str] = None
 		name, html_name = from_markdown(name)
 		date_str, date = Version._parse_date(cols[1])
