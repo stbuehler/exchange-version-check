@@ -1,5 +1,18 @@
 # exchange-version-check
 
+The check_stbuehler_exchange_version script has to modes:
+
+- `check` (default)
+- `pages`
+
+## check
+
+Icinga/nagios compatible plugin to check exchange server version.
+
+Currently looks for the `X-OWA-Version` header in the response for `http[s]://server/AutoDiscover/AutoDiscover.xml`.
+
+## pages
+
 Create machine (and human) readable list of exchange versions with an heuristic flag whether they are good to use.
 
 Heuristic is as follows:
@@ -8,5 +21,3 @@ Heuristic is as follows:
 - must be less than 31 days older than a release on a neighbor branch
 
 Versions are parsed from https://github.com/MicrosoftDocs/OfficeDocs-Exchange/blob/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md
-
-Goal: create an icinga/nagios check to run against exchange servers to check their version.

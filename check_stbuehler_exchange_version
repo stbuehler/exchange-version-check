@@ -7,6 +7,8 @@ import re
 import typing
 import yaml
 import requests
+import argparse
+import sys
 
 
 _MATCH_MD_LINK = re.compile(r'\[(.+?)\]\((.+?)\)')
@@ -145,7 +147,7 @@ class Tree(yaml.YAMLObject):
 	def _is_flat_version(self):
 		return self.version and 0 == len(self.children)
 
-	def _calc_alive(self, parent_alive: bool=True, parent_latest_release: typing.Optional[datetime.date]=None):
+	def _calc_alive(self, parent_alive: bool=True, parent_latest_release: typing.Optional[datetime.date]=None) -> None:
 		alive = bool(
 			parent_alive and
 			self.latest_release and
@@ -159,7 +161,7 @@ class Tree(yaml.YAMLObject):
 		for node in self.children:
 			node._calc_alive(alive, self.latest_release)
 
-	def _fix_tree(self):
+	def _fix_tree(self) -> None:
 		guess_name = True
 		calc_release_date = True
 		release_dates: typing.List[typing.Tuple[datetime.date, typing.Optional[str]]] = []
@@ -182,7 +184,7 @@ class Tree(yaml.YAMLObject):
 			self.latest_release = d.replace()  # clone date
 			self.latest_release_str = d_str
 
-	def html_table(self, out, *, nested: int=0):
+	def html_table(self, out, *, nested: int=0) -> None:
 		if self.alive:
 			dead_color_cls = ''
 		else:
@@ -307,17 +309,39 @@ class TreeBuilder(yaml.YAMLObject):
 		return list(root._gather_top_trees())
 
 
-# raw https://github.com/MicrosoftDocs/OfficeDocs-Exchange/blob/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md
-ms_release_list = requests.get('https://raw.githubusercontent.com/MicrosoftDocs/OfficeDocs-Exchange/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md')
-versions = list(Version.scan(ms_release_list.text))
+@dataclasses.dataclass
+class Trees:
+	trees: typing.List[Tree]
+	versions: typing.Dict[str, Version]
 
-trees = TreeBuilder.from_versions(versions)
+	def alive_versions(self) -> typing.List[str]:
+		return [
+			v.short_code
+			for tree in self.trees
+			for v in tree.gather_alive_versions()
+		]
 
-with open('versions.yaml', mode='w') as f:
-	yaml.dump(trees, stream=f)
+	def html_table(self, out) -> None:
+		for tree in self.trees:
+			tree.html_table(out)
 
-with open('versions.html', mode='w') as f:
-	f.write("""<!DOCTYPE html>
+	@staticmethod
+	def load(args: argparse.Namespace) -> 'Trees':
+		ms_release_list = requests.get(args.source)
+		versions = list(Version.scan(ms_release_list.text))
+
+		trees = TreeBuilder.from_versions(versions)
+		return Trees(trees=trees, versions={v.short_code: v for v in versions})
+
+
+def run_pages(args: argparse.Namespace):
+	trees = Trees.load(args)
+
+	with open('versions.yaml', mode='w') as f:
+		yaml.dump(trees.trees, stream=f)
+
+	with open('versions.html', mode='w') as f:
+		f.write("""<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -335,17 +359,100 @@ with open('versions.html', mode='w') as f:
 		<table class="table table-striped table-responsive" id="vt">
 			<thead class="thead-dark"><tr><th scope="col">Name</th><th scope="col">Version</th><th scope="col">Latest Release</th></tr></thead>
 """)
-	for tree in trees:
-		tree.html_table(f)
-	f.write("""		</table>
+		trees.html_table(f)
+		f.write("""		</table>
 	</div></body>
 </html>
 """)
 
-with open('alive.json', mode='w') as f:
-	versions = [
-		v.short_code
-		for tree in trees
-		for v in tree.gather_alive_versions()
-	]
-	json.dump(versions, f)
+	with open('alive.json', mode='w') as f:
+		json.dump(trees.alive_versions(), f)
+
+
+def run_check(args: argparse.Namespace):
+	try:
+		if args.cached_alive:
+			trees: typing.Optional[Trees] = []
+			alive_versions: typing.List[str] = requests.get(args.alive_source).json()
+		else:
+			trees = Trees.load(args)
+			alive_versions = trees.alive_versions()
+	except Exception as e:
+		print("UNKNOWN: Couldn't retrieve acceptable exchange server versions|")
+		print(e)
+		sys.exit(3)
+	proto = args.http and 'http' or 'https'
+	url = f'{proto}://{args.host}/AutoDiscover/AutoDiscover.xml'
+	try:
+		resp = requests.get(url, allow_redirects=True)
+	except Exception as e:
+		print("UNKNOWN: Couldn't find exchange server version|")
+		print(e)
+		sys.exit(3)
+	owa_version = resp.headers.get('X-OWA-Version', None)
+	if owa_version is None:
+		print(f"UNKNOWN: Missing X-OWA-Version response header for {url}|")
+		sys.exit(3)
+	if trees:
+		version = trees.versions.get(owa_version, None)
+		version_name = version and version.name or 'Unknown exchange version'
+	else:
+		version_name = 'Version names not loaded'
+	if owa_version in alive_versions:
+		print(f"OK: Version {owa_version} is fine ({version_name})|")
+		print(f"Other acceptable versions: {', '.join(alive_versions)}")
+		sys.exit(0)
+	else:
+		print(f"CRITICAL: Version {owa_version} is outdated ({version_name})|")
+		print(f"Acceptable versions: {', '.join(alive_versions)}")
+		print("Also see: https://stbuehler.github.io/exchange-version-check/versions.html")
+		sys.exit(2)
+
+
+def parser_add_help(parser: argparse.ArgumentParser):
+	# don't support "-h", but support "-?"
+	parser.add_argument(
+		'-?', '--help',
+		action='help', default=argparse.SUPPRESS,
+		help='show this help message and exit',
+	)
+
+
+def main():
+	# raw https://github.com/MicrosoftDocs/OfficeDocs-Exchange/blob/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md
+	# (source for https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates)
+	DEFAULT_MS_RELEASES_SOURCE = 'https://raw.githubusercontent.com/MicrosoftDocs/OfficeDocs-Exchange/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md'
+	DEFAULT_ALIVE_SOURCE = 'https://stbuehler.github.io/exchange-version-check/alive.json'
+
+	parser = argparse.ArgumentParser('check_stbuehler_exchange_version', add_help=False)
+	parser_add_help(parser)
+
+	subs = parser.add_subparsers(dest='command', required=False)
+
+	pages = subs.add_parser('pages', help='Generate machine and human readable files', add_help=False)
+	parser_add_help(pages)
+	pages.add_argument('--source', default=DEFAULT_MS_RELEASES_SOURCE)
+
+	check = subs.add_parser('check', help='Default subcommand: check an exchange server version', add_help=False)
+	parser_add_help(check)
+	check.add_argument('--source', default=DEFAULT_MS_RELEASES_SOURCE)
+	check.add_argument('-c', '--cached-alive', action='store_true', help='Use cached alive versions')
+	check.add_argument('--alive-source', default=DEFAULT_ALIVE_SOURCE)
+	check.add_argument('-h', '--host', required=True, help='Exchange host to check')
+	check.add_argument('--http', action='store_true', help='Use http request')
+
+	args, extra = parser.parse_known_args()
+	if args.command is None:
+		args.command = 'check'
+		check.parse_args(extra, namespace=args)
+
+	if args.command == 'pages':
+		run_pages(args)
+	elif args.command == 'check':
+		run_check(args)
+	else:
+		assert False, f'Unknown command: {args.command!r} '
+
+
+if __name__ == '__main__':
+	main()
