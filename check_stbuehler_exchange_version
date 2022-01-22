@@ -427,7 +427,7 @@ def main():
 	parser = argparse.ArgumentParser('check_stbuehler_exchange_version', add_help=False)
 	parser_add_help(parser)
 
-	subs = parser.add_subparsers(dest='command', required=False)
+	subs = parser.add_subparsers(dest='command', required=True)
 
 	pages = subs.add_parser('pages', help='Generate machine and human readable files', add_help=False)
 	parser_add_help(pages)
@@ -441,10 +441,12 @@ def main():
 	check.add_argument('-h', '--host', required=True, help='Exchange host to check')
 	check.add_argument('--http', action='store_true', help='Use http request')
 
-	args, extra = parser.parse_known_args()
-	if args.command is None:
-		args.command = 'check'
-		check.parse_args(extra, namespace=args)
+	argv = sys.argv[1:]
+	if len(argv) > 0 and not argv[0] in ('--help', '-?', 'check', 'pages'):
+		# default command
+		argv.insert(0, 'check')
+
+	args = parser.parse_args(argv)
 
 	if args.command == 'pages':
 		run_pages(args)
