@@ -1,0 +1,30 @@
+---
+name: Build gh-pages
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  build-gh-pages:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          mkdir pages
+          cd pages
+          ../check_stbuehler_exchange_version pages
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pages
