@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Copyright (c) 2022 Stefan Bühler
+# License: MIT (https://en.wikipedia.org/wiki/MIT_License)
+# Upstream: https://github.com/stbuehler/exchange-version-check
+
 import dataclasses
 import datetime
 import json
