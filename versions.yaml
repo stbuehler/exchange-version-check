@@ -1,5 +1,13 @@
 - name: Exchange Server 2019
   children:
+  - version:
+      name: Exchange Server 2019 CU12 (2022H1)
+      short_code: 15.2.1118.7
+      date: 2022-04-20
+      html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a149e06c-62f4-4b62-adf8-7d382223a239">Exchange
+        Server 2019 CU12 (2022H1)</a>
+    latest_release: 2022-04-20
+    alive: true
   - name: Exchange Server 2019 CU11
     html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=40be4769-0188-4b1a-a023-1a3ecb919870">Exchange
       Server 2019 CU11</a>
@@ -43,8 +51,6 @@
     latest_release: 2022-03-08
     alive: true
   - name: Exchange Server 2019 CU10
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=aa0d4c7c-526f-4a1a-924c-b534839f0001">Exchange
-      Server 2019 CU10</a>
     children:
     - version:
         name: Exchange Server 2019 CU10 Mar22SU
@@ -86,8 +92,6 @@
         name: Exchange Server 2019 CU10
         short_code: 15.2.922.7
         date: 2021-06-29
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=aa0d4c7c-526f-4a1a-924c-b534839f0001">Exchange
-          Server 2019 CU10</a>
       latest_release: 2021-06-29
     latest_release: 2022-03-08
     alive: true
@@ -274,10 +278,18 @@
       short_code: 15.2.196.0
       date: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2022-03-08
+  latest_release: 2022-04-20
   alive: true
 - name: Exchange Server 2016
   children:
+  - version:
+      name: Exchange Server 2016 CU23 (2022H1)
+      short_code: 15.1.2507.6
+      date: 2022-04-20
+      html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=ad395419-4d2f-4eb0-97fb-a5b88ab814e1">Exchange
+        Server 2016 CU23 (2022H1)</a>
+    latest_release: 2022-04-20
+    alive: true
   - name: Exchange Server 2016 CU22
     html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a7d608a2-d81b-46af-8753-8c3c2ea1f783">Exchange
       Server 2016 CU22</a>
@@ -321,8 +333,6 @@
     latest_release: 2022-03-08
     alive: true
   - name: Exchange Server 2016 CU21
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=88e4107e-a9a6-4847-959d-98e6e5d46f4a">Exchange
-      Server 2016 CU21</a>
     children:
     - version:
         name: Exchange Server 2016 CU21 Mar22SU
@@ -364,8 +374,6 @@
         name: Exchange Server 2016 CU21
         short_code: 15.1.2308.8
         date: 2021-06-29
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=88e4107e-a9a6-4847-959d-98e6e5d46f4a">Exchange
-          Server 2016 CU21</a>
       latest_release: 2021-06-29
     latest_release: 2022-03-08
     alive: true
@@ -640,7 +648,7 @@
         date: 2015-07-22
       latest_release: 2015-07-22
     latest_release: 2015-10-01
-  latest_release: 2022-03-08
+  latest_release: 2022-04-20
   alive: true
 - name: Exchange Server 2013
   children:
