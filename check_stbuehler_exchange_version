@@ -45,6 +45,7 @@ class Version:
 	date: typing.Optional[datetime.date]
 	date_str: typing.Optional[str]
 	html_name: typing.Optional[str]
+	tree: typing.Optional['Tree'] = dataclasses.field(default=None, repr=False)
 
 	_SPLIT_TITLE = re.compile(r'^\[(.+)\]\((.+)\)$')
 	_FIX_DATE_WS = re.compile(r'([a-zA-Z])([0-9])')
@@ -121,6 +122,7 @@ class Version:
 		if data.date_str:
 			# if we have date_str then date is not an exact representation
 			state.pop('date', None)
+		state.pop('tree', None)  # avoid cyclic links
 		return dumper.represent_mapping('tag:yaml.org,2002:map', state.items())
 yaml.Dumper.add_representer(Version, Version.to_yaml)
 
@@ -135,6 +137,7 @@ class Tree(yaml.YAMLObject):
 	latest_release: typing.Optional[datetime.date] = None
 	latest_release_str: typing.Optional[str] = None
 	alive: typing.Optional[bool] = None
+	parent: typing.Optional['Tree'] = None
 
 	_TOTAL_MAX_AGE = datetime.timedelta(days=180)
 	_COMPARE_MAX_AGE = datetime.timedelta(days=31)
@@ -151,6 +154,15 @@ class Tree(yaml.YAMLObject):
 		if self.latest_release:
 			return self.latest_release.strftime('%Y-%m-%d')
 		return None
+
+	def latest(self) -> typing.Optional['Version']:
+		if self.children:
+			l = max(self.children, key=lambda t: t.path)
+			if l:
+				v = l.latest()
+				if v:
+					return v
+		return self.version
 
 	def _is_flat_version(self):
 		return self.version and 0 == len(self.children)
@@ -234,6 +246,7 @@ class Tree(yaml.YAMLObject):
 		if data.latest_release_str:
 			# if we have a string the date isn't exact
 			state.pop('latest_release', None)
+		state.pop('parent', None)  # avoid cyclic links
 		return dumper.represent_mapping('tag:yaml.org,2002:map', state.items())
 yaml.Dumper.add_representer(Tree, Tree.to_yaml)
 
@@ -288,16 +301,21 @@ class TreeBuilder(yaml.YAMLObject):
 		]
 		if not self.name and not self.version and len(children) == 1:
 			return children[0]
-		return Tree(
+		tree = Tree(
 			path=self.path,
 			name=self.name,
 			html_name=self.html_name,
 			version=self.version,
 			children=children,
 		)
+		if self.version:
+			self.version.tree = tree
+		for c in children:
+			c.parent = tree
+		return tree
 
 	@staticmethod
-	def from_versions(versions: typing.Iterable[Version]) -> typing.List['Tree']:
+	def from_versions(versions: typing.Iterable[Version]) -> 'Tree':
 		root = TreeBuilder(path=())
 		for (path, name) in (
 			((15, 2), 'Exchange Server 2019'),
@@ -314,7 +332,11 @@ class TreeBuilder(yaml.YAMLObject):
 			root._insert_name(path, name)
 		for version in versions:
 			root._insert(version.num_code, version)
-		return list(root._gather_top_trees())
+		children = list(root._gather_top_trees())
+		root = Tree(path=(), name='', html_name=None, version=None, children=children)
+		for c in children:
+			c.parent = root
+		return root
 
 
 @dataclasses.dataclass
@@ -338,8 +360,8 @@ class Trees:
 		ms_release_list = requests.get(args.source)
 		versions = list(Version.scan(ms_release_list.text))
 
-		trees = TreeBuilder.from_versions(versions)
-		return Trees(trees=trees, versions={v.short_code: v for v in versions})
+		root = TreeBuilder.from_versions(versions)
+		return Trees(trees=root.children, versions={v.short_code: v for v in versions})
 
 
 def run_pages(args: argparse.Namespace):
@@ -417,7 +439,15 @@ def run_check(args: argparse.Namespace):
 		sys.exit(0)
 	else:
 		print(f"CRITICAL: Version {owa_version} is outdated ({version_name})|")
-		print(f"Acceptable versions: {', '.join(alive_versions)}")
+		if version and version.tree:
+			print("Update targets:")
+			p = version.tree.parent
+			while p:
+				to = p.latest()
+				print(f"- {to.short_code} ({to.name})")
+				p = p.parent
+		else:
+			print(f"Acceptable versions: {', '.join(alive_versions)}")
 		print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
 		sys.exit(2)
 
