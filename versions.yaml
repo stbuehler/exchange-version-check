@@ -19,7 +19,6 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a149e06c-62f4-4b62-adf8-7d382223a239">Exchange
           Server 2019 CU12 (2022H1)</a>
       latest_release: 2022-04-20
-      alive: true
     latest_release: 2022-05-10
     alive: true
   - name: Exchange Server 2019 CU11
@@ -322,7 +321,6 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=ad395419-4d2f-4eb0-97fb-a5b88ab814e1">Exchange
           Server 2016 CU23 (2022H1)</a>
       latest_release: 2022-04-20
-      alive: true
     latest_release: 2022-05-10
     alive: true
   - name: Exchange Server 2016 CU22
