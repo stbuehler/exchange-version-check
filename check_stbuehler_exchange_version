@@ -432,23 +432,25 @@ def run_check(args: argparse.Namespace):
 		version_name = version and version.name or 'Unknown exchange version'
 	else:
 		version_name = 'Version names not loaded'
+	rc: int
 	if owa_version in alive_versions:
 		print(f"OK: Version {owa_version} is fine ({version_name})|")
-		print(f"Other acceptable versions: {', '.join(alive_versions)}")
-		sys.exit(0)
+		rc = 0
 	else:
 		print(f"CRITICAL: Version {owa_version} is outdated ({version_name})|")
-		if version and version.tree:
-			print("Update targets:")
-			p = version.tree.parent
-			while p:
-				to = p.latest()
+		rc = 2
+	if version and version.tree:
+		print("Update targets:")
+		p = version.tree.parent
+		while p:
+			to = p.latest()
+			if to != version:
 				print(f"- {to.short_code} ({to.name})")
-				p = p.parent
-		else:
-			print(f"Acceptable versions: {', '.join(alive_versions)}")
-		print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
-		sys.exit(2)
+			p = p.parent
+	else:
+		print(f"Acceptable versions: {', '.join(alive_versions)}")
+	print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
+	sys.exit(rc)
 
 
 def parser_add_help(parser: argparse.ArgumentParser):
