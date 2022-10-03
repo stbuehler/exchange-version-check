@@ -15,24 +15,24 @@ import argparse
 import sys
 
 
-_MATCH_MD_LINK = re.compile(r'\[(.+?)\]\((.+?)\)')
+_MATCH_HTML_LINK = re.compile(r'<a(?:\s+(?:href="(.*)"|\S+))*>(.*)</a>', re.DOTALL|re.IGNORECASE)
 # support simple links
-def from_markdown(md: str) -> typing.Tuple[str, typing.Optional[str]]:
+def from_html(orig_html: str) -> typing.Tuple[str, typing.Optional[str]]:
 	plain = ''
 	html = ''
 	while True:
-		m = _MATCH_MD_LINK.search(md)
+		m = _MATCH_HTML_LINK.search(orig_html)
 		if not m:
-			plain += md
-			html += md
+			plain += orig_html
+			html += orig_html
 			break
-		pre = md[:m.start(0)]
+		pre = orig_html[:m.start(0)]
 		plain += pre
 		html += pre
-		md = md[m.end(0):]
+		orig_html = orig_html[m.end(0):]
 		#
-		plain += m[1]
-		html += f'<a href="{m[2]}">{m[1]}</a>'
+		plain += m[2]
+		html += f'<a href="{m[1]}">{m[2]}</a>'
 	if plain == html:
 		return (plain, None)
 	return (plain, html)
@@ -83,17 +83,12 @@ class Version:
 		return (f'Unknown: {col}', None)
 
 	@staticmethod
-	def parse_line(line: str):
-		if line.startswith('|'):
-			line = line[1:]
-		if line.endswith('|'):
-			line = line[:-1]
-		cols = line.split('|')
-		name = cols[0].strip()
-		while name.startswith('&nbsp;'):
-			name = name[len('&nbsp;'):].lstrip()
-		html_name: typing.Optional[str] = None
-		name, html_name = from_markdown(name)
+	def parse_table_row(row: str) -> typing.Optional['Version']:
+		cols = re.findall(r'<td(?:\s[^>]*)?>(.*?)</td>', row, re.DOTALL|re.IGNORECASE)
+		assert len(cols) >= 3, f"Unexpected table row: {row!r}"
+		if not cols[0] and not cols[1] and not cols[2]:
+			return None
+		name, html_name = from_html(cols[0].strip())
 		date_str, date = Version._parse_date(cols[1])
 		short_code = cols[2]
 		return Version(
@@ -106,12 +101,15 @@ class Version:
 
 	@staticmethod
 	def scan(input: str):
-		for line in input.splitlines():
-			if not line.startswith('|'):
+		tables = re.findall(r'<table(?:\s[^>]*)?>(.*?)</table>', input, re.DOTALL|re.IGNORECASE)
+		for table in tables:
+			if not '<th>Product name</th>' in table:
 				continue
-			if line.startswith(('|Product name|', '|---|', '||')) or line == '|':
-				continue
-			yield Version.parse_line(line)
+			rows = re.findall(r'<tr(?:\s[^>]*)?>(.*?)</tr>', table, re.DOTALL|re.IGNORECASE)[1:]  # skip header
+			for row in rows:
+				version = Version.parse_table_row(row)
+				if version:
+					yield version
 
 	def to_yaml(dumper: yaml.Dumper, data: 'Version'):
 		state = {
@@ -358,7 +356,8 @@ class Trees:
 	@staticmethod
 	def load(args: argparse.Namespace) -> 'Trees':
 		ms_release_list = requests.get(args.source)
-		versions = list(Version.scan(ms_release_list.text))
+		# assume content is utf-8 (html meta), although not specified in http content-type:
+		versions = list(Version.scan(ms_release_list.content.decode('utf-8')))
 
 		root = TreeBuilder.from_versions(versions)
 		return Trees(trees=root.children, versions={v.short_code: v for v in versions})
@@ -462,9 +461,8 @@ def parser_add_help(parser: argparse.ArgumentParser):
 
 
 def main():
-	# raw https://github.com/MicrosoftDocs/OfficeDocs-Exchange/blob/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md
-	# (source for https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates)
-	DEFAULT_MS_RELEASES_SOURCE = 'https://raw.githubusercontent.com/MicrosoftDocs/OfficeDocs-Exchange/public/Exchange/ExchangeServer/new-features/build-numbers-and-release-dates.md'
+	# MS killed https://github.com/MicrosoftDocs/OfficeDocs-Exchange, so now we have to parse html
+	DEFAULT_MS_RELEASES_SOURCE = 'https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates'
 	DEFAULT_ALIVE_SOURCE = 'https://stbuehler.github.io/exchange-version-check/alive.json'
 
 	parser = argparse.ArgumentParser('check_stbuehler_exchange_version', add_help=False)
