@@ -466,7 +466,6 @@
         html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
           Server 2016 CU22 Nov22SU</a>
       latest_release: 2022-11-08
-      alive: true
     - version:
         name: Exchange Server 2016 CU22 Oct22SU
         short_code: 15.1.2375.32
@@ -524,7 +523,6 @@
           data-linktype="external">Exchange Server 2016 CU22</a>
       latest_release: 2021-09-28
     latest_release: 2022-11-08
-    alive: true
   - name: Exchange Server 2016 CU21
     children:
     - version:
