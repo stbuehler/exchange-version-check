@@ -442,11 +442,13 @@ def run_check(args: argparse.Namespace):
 	if version and version.tree:
 		print("Update targets:")
 		p = version.tree.parent
+		previos_to = None
 		while p:
 			to = p.latest()
-			if to != version:
+			if to != version and to != previos_to:
 				print(f"- {to.short_code} ({to.name})")
 			p = p.parent
+			previos_to = to
 	else:
 		print(f"Acceptable versions: {', '.join(alive_versions)}")
 	print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
