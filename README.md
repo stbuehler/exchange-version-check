@@ -19,5 +19,6 @@ Heuristic is as follows:
 
 - must be less than 180 days old
 - must be less than 31 days older than a release on a neighbor branch
+- always require latest SU in a branch
 
 Versions are parsed from https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates (sadly Microsoft killed the https://github.com/MicrosoftDocs/OfficeDocs-Exchange repository with the markdown source).
