@@ -19,7 +19,6 @@
         html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
           Server 2019 CU13 Aug23SU</a>
       latest_release: 2023-08-08
-      alive: true
     - version:
         name: Exchange Server 2019 CU13 Jun23SU
         short_code: 15.2.1258.16
@@ -55,7 +54,6 @@
         html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
           Server 2019 CU12 Aug23SU</a>
       latest_release: 2023-08-08
-      alive: true
     - version:
         name: Exchange Server 2019 CU12 Jun23SU
         short_code: 15.2.1118.30
@@ -459,7 +457,6 @@
         html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
           Server 2016 CU23 Aug23SU</a>
       latest_release: 2023-08-08
-      alive: true
     - version:
         name: Exchange Server 2016 CU23 Jun23SU
         short_code: 15.1.2507.27
