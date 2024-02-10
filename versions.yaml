@@ -1068,8 +1068,6 @@
       latest_release: 2019-06-18
     latest_release: 2023-03-14
   - name: Exchange Server 2013 CU22
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57826"
-      data-linktype="external">Exchange Server 2013 CU22</a>
     children:
     - version:
         name: Exchange Server 2013 CU22 Mar21SU
@@ -1082,8 +1080,6 @@
         name: Exchange Server 2013 CU22
         short_code: 15.0.1473.3
         date: 2019-02-12
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57826"
-          data-linktype="external">Exchange Server 2013 CU22</a>
       latest_release: 2019-02-12
     latest_release: 2021-03-02
   - name: Exchange Server 2013 CU21
@@ -1245,28 +1241,28 @@
         name: Update Rollup 29 for Exchange Server 2010 SP3
         short_code: 14.3.468.0
         date: 2019-07-09
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58476"
+        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/07/exchange2010-kb4509410-x64-en_89bf203b193215a3b78b37acf9e5dd579486b41d.cab"
           data-linktype="external">Update Rollup 29 for Exchange Server 2010 SP3</a>
       latest_release: 2019-07-09
     - version:
         name: Update Rollup 28 for Exchange Server 2010 SP3
         short_code: 14.3.461.1
         date: 2019-06-07
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58354"
+        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/05/exchange2010-kb4503028-x64-en_9d7dd6b4b1719c1ab46c733150af3ff88cc6a310.cab"
           data-linktype="external">Update Rollup 28 for Exchange Server 2010 SP3</a>
       latest_release: 2019-06-07
     - version:
         name: Update Rollup 27 for Exchange Server 2010 SP3
         short_code: 14.3.452.0
         date: 2019-04-09
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58196"
+        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/exchange2010-kb4491413-x64-en_670ad64849aa7180ee6457aac2358ad16200b2de.cab"
           data-linktype="external">Update Rollup 27 for Exchange Server 2010 SP3</a>
       latest_release: 2019-04-09
     - version:
         name: Update Rollup 26 for Exchange Server 2010 SP3
         short_code: 14.3.442.0
         date: 2019-02-12
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57824"
+        html_name: <a href="https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/02/exchange2010-kb4487052-x64-en_da5f4eacaa548c75cc4055144d7221f115efd763.cab"
           data-linktype="external">Update Rollup 26 for Exchange Server 2010 SP3</a>
       latest_release: 2019-02-12
     - version:
