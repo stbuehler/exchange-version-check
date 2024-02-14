@@ -1,5 +1,13 @@
 - name: Exchange Server 2019
   children:
+  - version:
+      name: Exchange Server 2019 CU14 (2024H1)
+      short_code: 15.2.1544.04
+      date: 2024-02-13
+      html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=9fbd842e-828a-408a-b562-5632a8a827ab"
+        data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
+    latest_release: 2024-02-13
+    alive: true
   - name: Exchange Server 2019 CU13 (2023H1)
     html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=f4406d99-fc26-451f-85c1-eaaa8b250fd6"
       data-linktype="external">Exchange Server 2019 CU13 (2023H1)</a>
@@ -462,7 +470,7 @@
       short_code: 15.2.196.0
       date: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2023-11-14
+  latest_release: 2024-02-13
   alive: true
 - name: Exchange Server 2016
   children:
