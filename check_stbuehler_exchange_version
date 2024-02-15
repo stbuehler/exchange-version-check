@@ -90,7 +90,8 @@ class Version:
 			return None
 		name, html_name = from_html(cols[0].strip())
 		date_str, date = Version._parse_date(cols[1])
-		short_code = cols[2]
+		# remove leading zeroes at the beginning and after each '.'
+		short_code = re.sub(r'(^|\.)0+(\d)', r'\1\2', cols[2])
 		return Version(
 			name=name,
 			short_code=short_code,
