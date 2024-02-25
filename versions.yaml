@@ -1,16 +1,18 @@
 - name: Exchange Server 2019
   children:
-  - version:
-      name: Exchange Server 2019 CU14 (2024H1)
-      short_code: 15.2.1544.4
-      date: 2024-02-13
-      html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=9fbd842e-828a-408a-b562-5632a8a827ab"
-        data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
+  - name: Exchange Server 2019 CU14 (2024H1)
+    children:
+    - version:
+        name: Exchange Server 2019 CU14 (2024H1)
+        short_code: 15.2.1544.4
+        date: 2024-02-13
+        html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=9fbd842e-828a-408a-b562-5632a8a827ab"
+          data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
+      latest_release: 2024-02-13
+      alive: true
     latest_release: 2024-02-13
     alive: true
-  - name: Exchange Server 2019 CU13 (2023H1)
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=f4406d99-fc26-451f-85c1-eaaa8b250fd6"
-      data-linktype="external">Exchange Server 2019 CU13 (2023H1)</a>
+  - name: Exchange Server 2019 CU13
     children:
     - version:
         name: Exchange Server 2019 CU13 Nov23SU
@@ -57,9 +59,7 @@
       latest_release: 2023-05-03
     latest_release: 2023-11-14
     alive: true
-  - name: Exchange Server 2019 CU12 (2022H1)
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a149e06c-62f4-4b62-adf8-7d382223a239"
-      data-linktype="external">Exchange Server 2019 CU12 (2022H1)</a>
+  - name: Exchange Server 2019 CU12
     children:
     - version:
         name: Exchange Server 2019 CU12 Nov23SU
@@ -68,7 +68,6 @@
         html_name: <a href="https://support.microsoft.com/help/5032146" data-linktype="external">Exchange
           Server 2019 CU12 Nov23SU</a>
       latest_release: 2023-11-14
-      alive: true
     - version:
         name: Exchange Server 2019 CU12 Oct23SU
         short_code: 15.2.1118.39
@@ -154,10 +153,7 @@
           data-linktype="external">Exchange Server 2019 CU12 (2022H1)</a>
       latest_release: 2022-04-20
     latest_release: 2023-11-14
-    alive: true
   - name: Exchange Server 2019 CU11
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=40be4769-0188-4b1a-a023-1a3ecb919870"
-      data-linktype="external">Exchange Server 2019 CU11</a>
     children:
     - version:
         name: Exchange Server 2019 CU11 Mar23SU
@@ -465,18 +461,19 @@
         date: 2018-10-22
       latest_release: 2018-10-22
     latest_release: 2021-03-02
-  - version:
-      name: Exchange Server 2019 Preview
-      short_code: 15.2.196.0
-      date: 2018-07-24
+  - name: Exchange Server 2019 Preview
+    children:
+    - version:
+        name: Exchange Server 2019 Preview
+        short_code: 15.2.196.0
+        date: 2018-07-24
+      latest_release: 2018-07-24
     latest_release: 2018-07-24
   latest_release: 2024-02-13
   alive: true
 - name: Exchange Server 2016
   children:
-  - name: Exchange Server 2016 CU23 (2022H1)
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=ad395419-4d2f-4eb0-97fb-a5b88ab814e1"
-      data-linktype="external">Exchange Server 2016 CU23 (2022H1)</a>
+  - name: Exchange Server 2016 CU23
     children:
     - version:
         name: Exchange Server 2016 CU23 Nov23SU
@@ -573,8 +570,6 @@
     latest_release: 2023-11-14
     alive: true
   - name: Exchange Server 2016 CU22
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a7d608a2-d81b-46af-8753-8c3c2ea1f783"
-      data-linktype="external">Exchange Server 2016 CU22</a>
     children:
     - version:
         name: Exchange Server 2016 CU22 Nov22SU
@@ -906,42 +901,63 @@
         date: 2017-12-19
       latest_release: 2017-12-19
     latest_release: 2021-03-02
-  - version:
-      name: Exchange Server 2016 CU7
-      short_code: 15.1.1261.35
-      date: 2017-09-19
+  - name: Exchange Server 2016 CU7
+    children:
+    - version:
+        name: Exchange Server 2016 CU7
+        short_code: 15.1.1261.35
+        date: 2017-09-19
+      latest_release: 2017-09-19
     latest_release: 2017-09-19
-  - version:
-      name: Exchange Server 2016 CU6
-      short_code: 15.1.1034.26
-      date: 2017-06-27
+  - name: Exchange Server 2016 CU6
+    children:
+    - version:
+        name: Exchange Server 2016 CU6
+        short_code: 15.1.1034.26
+        date: 2017-06-27
+      latest_release: 2017-06-27
     latest_release: 2017-06-27
-  - version:
-      name: Exchange Server 2016 CU5
-      short_code: 15.1.845.34
-      date: 2017-03-21
+  - name: Exchange Server 2016 CU5
+    children:
+    - version:
+        name: Exchange Server 2016 CU5
+        short_code: 15.1.845.34
+        date: 2017-03-21
+      latest_release: 2017-03-21
     latest_release: 2017-03-21
-  - version:
-      name: Exchange Server 2016 CU4
-      short_code: 15.1.669.32
-      date: 2016-12-13
+  - name: Exchange Server 2016 CU4
+    children:
+    - version:
+        name: Exchange Server 2016 CU4
+        short_code: 15.1.669.32
+        date: 2016-12-13
+      latest_release: 2016-12-13
     latest_release: 2016-12-13
-  - version:
-      name: Exchange Server 2016 CU3
-      short_code: 15.1.544.27
-      date: 2016-09-20
+  - name: Exchange Server 2016 CU3
+    children:
+    - version:
+        name: Exchange Server 2016 CU3
+        short_code: 15.1.544.27
+        date: 2016-09-20
+      latest_release: 2016-09-20
     latest_release: 2016-09-20
-  - version:
-      name: Exchange Server 2016 CU2
-      short_code: 15.1.466.34
-      date: 2016-06-21
+  - name: Exchange Server 2016 CU2
+    children:
+    - version:
+        name: Exchange Server 2016 CU2
+        short_code: 15.1.466.34
+        date: 2016-06-21
+      latest_release: 2016-06-21
     latest_release: 2016-06-21
-  - version:
-      name: Exchange Server 2016 CU1
-      short_code: 15.1.396.30
-      date: 2016-03-15
+  - name: Exchange Server 2016 CU1
+    children:
+    - version:
+        name: Exchange Server 2016 CU1
+        short_code: 15.1.396.30
+        date: 2016-03-15
+      latest_release: 2016-03-15
     latest_release: 2016-03-15
-  - name: Exchange Server 2016 Preview
+  - name: Exchange Server 2016
     children:
     - version:
         name: Exchange Server 2016 RTM
@@ -959,8 +975,6 @@
 - name: Exchange Server 2013
   children:
   - name: Exchange Server 2013 CU23
-    html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58392"
-      data-linktype="external">Exchange Server 2013 CU23</a>
     children:
     - version:
         name: Exchange Server 2013 CU23 Mar23SU
@@ -1105,85 +1119,133 @@
         date: 2018-06-19
       latest_release: 2018-06-19
     latest_release: 2021-03-02
-  - version:
-      name: Exchange Server 2013 CU20
-      short_code: 15.0.1367.3
-      date: 2018-03-20
+  - name: Exchange Server 2013 CU20
+    children:
+    - version:
+        name: Exchange Server 2013 CU20
+        short_code: 15.0.1367.3
+        date: 2018-03-20
+      latest_release: 2018-03-20
     latest_release: 2018-03-20
-  - version:
-      name: Exchange Server 2013 CU19
-      short_code: 15.0.1365.1
-      date: 2017-12-19
+  - name: Exchange Server 2013 CU19
+    children:
+    - version:
+        name: Exchange Server 2013 CU19
+        short_code: 15.0.1365.1
+        date: 2017-12-19
+      latest_release: 2017-12-19
     latest_release: 2017-12-19
-  - version:
-      name: Exchange Server 2013 CU18
-      short_code: 15.0.1347.2
-      date: 2017-09-19
+  - name: Exchange Server 2013 CU18
+    children:
+    - version:
+        name: Exchange Server 2013 CU18
+        short_code: 15.0.1347.2
+        date: 2017-09-19
+      latest_release: 2017-09-19
     latest_release: 2017-09-19
-  - version:
-      name: Exchange Server 2013 CU17
-      short_code: 15.0.1320.4
-      date: 2017-06-27
+  - name: Exchange Server 2013 CU17
+    children:
+    - version:
+        name: Exchange Server 2013 CU17
+        short_code: 15.0.1320.4
+        date: 2017-06-27
+      latest_release: 2017-06-27
     latest_release: 2017-06-27
-  - version:
-      name: Exchange Server 2013 CU16
-      short_code: 15.0.1293.2
-      date: 2017-03-21
+  - name: Exchange Server 2013 CU16
+    children:
+    - version:
+        name: Exchange Server 2013 CU16
+        short_code: 15.0.1293.2
+        date: 2017-03-21
+      latest_release: 2017-03-21
     latest_release: 2017-03-21
-  - version:
-      name: Exchange Server 2013 CU15
-      short_code: 15.0.1263.5
-      date: 2016-12-13
+  - name: Exchange Server 2013 CU15
+    children:
+    - version:
+        name: Exchange Server 2013 CU15
+        short_code: 15.0.1263.5
+        date: 2016-12-13
+      latest_release: 2016-12-13
     latest_release: 2016-12-13
-  - version:
-      name: Exchange Server 2013 CU14
-      short_code: 15.0.1236.3
-      date: 2016-09-20
+  - name: Exchange Server 2013 CU14
+    children:
+    - version:
+        name: Exchange Server 2013 CU14
+        short_code: 15.0.1236.3
+        date: 2016-09-20
+      latest_release: 2016-09-20
     latest_release: 2016-09-20
-  - version:
-      name: Exchange Server 2013 CU13
-      short_code: 15.0.1210.3
-      date: 2016-06-21
+  - name: Exchange Server 2013 CU13
+    children:
+    - version:
+        name: Exchange Server 2013 CU13
+        short_code: 15.0.1210.3
+        date: 2016-06-21
+      latest_release: 2016-06-21
     latest_release: 2016-06-21
-  - version:
-      name: Exchange Server 2013 CU12
-      short_code: 15.0.1178.4
-      date: 2016-03-15
+  - name: Exchange Server 2013 CU12
+    children:
+    - version:
+        name: Exchange Server 2013 CU12
+        short_code: 15.0.1178.4
+        date: 2016-03-15
+      latest_release: 2016-03-15
     latest_release: 2016-03-15
-  - version:
-      name: Exchange Server 2013 CU11
-      short_code: 15.0.1156.6
-      date: 2015-12-15
+  - name: Exchange Server 2013 CU11
+    children:
+    - version:
+        name: Exchange Server 2013 CU11
+        short_code: 15.0.1156.6
+        date: 2015-12-15
+      latest_release: 2015-12-15
     latest_release: 2015-12-15
-  - version:
-      name: Exchange Server 2013 CU10
-      short_code: 15.0.1130.7
-      date: 2015-09-15
+  - name: Exchange Server 2013 CU10
+    children:
+    - version:
+        name: Exchange Server 2013 CU10
+        short_code: 15.0.1130.7
+        date: 2015-09-15
+      latest_release: 2015-09-15
     latest_release: 2015-09-15
-  - version:
-      name: Exchange Server 2013 CU9
-      short_code: 15.0.1104.5
-      date: 2015-06-17
+  - name: Exchange Server 2013 CU9
+    children:
+    - version:
+        name: Exchange Server 2013 CU9
+        short_code: 15.0.1104.5
+        date: 2015-06-17
+      latest_release: 2015-06-17
     latest_release: 2015-06-17
-  - version:
-      name: Exchange Server 2013 CU8
-      short_code: 15.0.1076.9
-      date: 2015-03-17
+  - name: Exchange Server 2013 CU8
+    children:
+    - version:
+        name: Exchange Server 2013 CU8
+        short_code: 15.0.1076.9
+        date: 2015-03-17
+      latest_release: 2015-03-17
     latest_release: 2015-03-17
-  - version:
-      name: Exchange Server 2013 CU7
-      short_code: 15.0.1044.25
-      date: 2014-12-09
+  - name: Exchange Server 2013 CU7
+    children:
+    - version:
+        name: Exchange Server 2013 CU7
+        short_code: 15.0.1044.25
+        date: 2014-12-09
+      latest_release: 2014-12-09
     latest_release: 2014-12-09
-  - version:
-      name: Exchange Server 2013 CU6
-      short_code: 15.0.995.29
-      date: 2014-08-26
+  - name: Exchange Server 2013 CU6
+    children:
+    - version:
+        name: Exchange Server 2013 CU6
+        short_code: 15.0.995.29
+        date: 2014-08-26
+      latest_release: 2014-08-26
     latest_release: 2014-08-26
-  - version:
-      name: Exchange Server 2013 CU5
-      short_code: 15.0.913.22
-      date: 2014-05-27
+  - name: Exchange Server 2013 CU5
+    children:
+    - version:
+        name: Exchange Server 2013 CU5
+        short_code: 15.0.913.22
+        date: 2014-05-27
+      latest_release: 2014-05-27
     latest_release: 2014-05-27
   - name: Exchange Server 2013 SP1
     children:
@@ -1200,180 +1262,265 @@
         date: 2014-02-25
       latest_release: 2014-02-25
     latest_release: 2021-03-02
-  - version:
-      name: Exchange Server 2013 CU3
-      short_code: 15.0.775.38
-      date: 2013-11-25
+  - name: Exchange Server 2013 CU3
+    children:
+    - version:
+        name: Exchange Server 2013 CU3
+        short_code: 15.0.775.38
+        date: 2013-11-25
+      latest_release: 2013-11-25
     latest_release: 2013-11-25
-  - version:
-      name: Exchange Server 2013 CU2
-      short_code: 15.0.712.24
-      date: 2013-07-09
+  - name: Exchange Server 2013 CU2
+    children:
+    - version:
+        name: Exchange Server 2013 CU2
+        short_code: 15.0.712.24
+        date: 2013-07-09
+      latest_release: 2013-07-09
     latest_release: 2013-07-09
-  - version:
-      name: Exchange Server 2013 CU1
-      short_code: 15.0.620.29
-      date: 2013-04-02
+  - name: Exchange Server 2013 CU1
+    children:
+    - version:
+        name: Exchange Server 2013 CU1
+        short_code: 15.0.620.29
+        date: 2013-04-02
+      latest_release: 2013-04-02
     latest_release: 2013-04-02
-  - version:
-      name: Exchange Server 2013 RTM
-      short_code: 15.0.516.32
-      date: 2012-12-03
+  - name: Exchange Server 2013 RTM
+    children:
+    - version:
+        name: Exchange Server 2013 RTM
+        short_code: 15.0.516.32
+        date: 2012-12-03
+      latest_release: 2012-12-03
     latest_release: 2012-12-03
   latest_release: 2023-03-14
 - name: Exchange Server 2010
   children:
   - children:
-    - version:
-        name: Update Rollup 32 for Exchange Server 2010 SP3
-        short_code: 14.3.513.0
-        date: 2021-03-02
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102774"
-          data-linktype="external">Update Rollup 32 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 32 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 32 for Exchange Server 2010 SP3
+          short_code: 14.3.513.0
+          date: 2021-03-02
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102774"
+            data-linktype="external">Update Rollup 32 for Exchange Server 2010 SP3</a>
+        latest_release: 2021-03-02
       latest_release: 2021-03-02
-    - version:
-        name: Update Rollup 31 for Exchange Server 2010 SP3
-        short_code: 14.3.509.0
-        date: 2020-12-01
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102519"
-          data-linktype="external">Update Rollup 31 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 31 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 31 for Exchange Server 2010 SP3
+          short_code: 14.3.509.0
+          date: 2020-12-01
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102519"
+            data-linktype="external">Update Rollup 31 for Exchange Server 2010 SP3</a>
+        latest_release: 2020-12-01
       latest_release: 2020-12-01
-    - version:
-        name: Update Rollup 30 for Exchange Server 2010 SP3
-        short_code: 14.3.496.0
-        date: 2020-02-11
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=100910"
-          data-linktype="external">Update Rollup 30 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 30 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 30 for Exchange Server 2010 SP3
+          short_code: 14.3.496.0
+          date: 2020-02-11
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=100910"
+            data-linktype="external">Update Rollup 30 for Exchange Server 2010 SP3</a>
+        latest_release: 2020-02-11
       latest_release: 2020-02-11
-    - version:
-        name: Update Rollup 29 for Exchange Server 2010 SP3
-        short_code: 14.3.468.0
-        date: 2019-07-09
-        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/07/exchange2010-kb4509410-x64-en_89bf203b193215a3b78b37acf9e5dd579486b41d.cab"
-          data-linktype="external">Update Rollup 29 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 29 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 29 for Exchange Server 2010 SP3
+          short_code: 14.3.468.0
+          date: 2019-07-09
+          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/07/exchange2010-kb4509410-x64-en_89bf203b193215a3b78b37acf9e5dd579486b41d.cab"
+            data-linktype="external">Update Rollup 29 for Exchange Server 2010 SP3</a>
+        latest_release: 2019-07-09
       latest_release: 2019-07-09
-    - version:
-        name: Update Rollup 28 for Exchange Server 2010 SP3
-        short_code: 14.3.461.1
-        date: 2019-06-07
-        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/05/exchange2010-kb4503028-x64-en_9d7dd6b4b1719c1ab46c733150af3ff88cc6a310.cab"
-          data-linktype="external">Update Rollup 28 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 28 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 28 for Exchange Server 2010 SP3
+          short_code: 14.3.461.1
+          date: 2019-06-07
+          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/05/exchange2010-kb4503028-x64-en_9d7dd6b4b1719c1ab46c733150af3ff88cc6a310.cab"
+            data-linktype="external">Update Rollup 28 for Exchange Server 2010 SP3</a>
+        latest_release: 2019-06-07
       latest_release: 2019-06-07
-    - version:
-        name: Update Rollup 27 for Exchange Server 2010 SP3
-        short_code: 14.3.452.0
-        date: 2019-04-09
-        html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/exchange2010-kb4491413-x64-en_670ad64849aa7180ee6457aac2358ad16200b2de.cab"
-          data-linktype="external">Update Rollup 27 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 27 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 27 for Exchange Server 2010 SP3
+          short_code: 14.3.452.0
+          date: 2019-04-09
+          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/exchange2010-kb4491413-x64-en_670ad64849aa7180ee6457aac2358ad16200b2de.cab"
+            data-linktype="external">Update Rollup 27 for Exchange Server 2010 SP3</a>
+        latest_release: 2019-04-09
       latest_release: 2019-04-09
-    - version:
-        name: Update Rollup 26 for Exchange Server 2010 SP3
-        short_code: 14.3.442.0
-        date: 2019-02-12
-        html_name: <a href="https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/02/exchange2010-kb4487052-x64-en_da5f4eacaa548c75cc4055144d7221f115efd763.cab"
-          data-linktype="external">Update Rollup 26 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 26 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 26 for Exchange Server 2010 SP3
+          short_code: 14.3.442.0
+          date: 2019-02-12
+          html_name: <a href="https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/02/exchange2010-kb4487052-x64-en_da5f4eacaa548c75cc4055144d7221f115efd763.cab"
+            data-linktype="external">Update Rollup 26 for Exchange Server 2010 SP3</a>
+        latest_release: 2019-02-12
       latest_release: 2019-02-12
-    - version:
-        name: Update Rollup 25 for Exchange Server 2010 SP3
-        short_code: 14.3.435.0
-        date: 2019-01-08
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57759"
-          data-linktype="external">Update Rollup 25 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 25 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 25 for Exchange Server 2010 SP3
+          short_code: 14.3.435.0
+          date: 2019-01-08
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57759"
+            data-linktype="external">Update Rollup 25 for Exchange Server 2010 SP3</a>
+        latest_release: 2019-01-08
       latest_release: 2019-01-08
-    - version:
-        name: Update Rollup 24 for Exchange Server 2010 SP3
-        short_code: 14.3.419.0
-        date: 2018-09-05
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57306"
-          data-linktype="external">Update Rollup 24 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 24 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 24 for Exchange Server 2010 SP3
+          short_code: 14.3.419.0
+          date: 2018-09-05
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57306"
+            data-linktype="external">Update Rollup 24 for Exchange Server 2010 SP3</a>
+        latest_release: 2018-09-05
       latest_release: 2018-09-05
-    - version:
-        name: Update Rollup 23 for Exchange Server 2010 SP3
-        short_code: 14.3.417.1
-        date: 2018-08-13
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57219"
-          data-linktype="external">Update Rollup 23 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 23 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 23 for Exchange Server 2010 SP3
+          short_code: 14.3.417.1
+          date: 2018-08-13
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57219"
+            data-linktype="external">Update Rollup 23 for Exchange Server 2010 SP3</a>
+        latest_release: 2018-08-13
       latest_release: 2018-08-13
-    - version:
-        name: Update Rollup 22 for Exchange Server 2010 SP3
-        short_code: 14.3.411.0
-        date: 2018-06-19
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57065"
-          data-linktype="external">Update Rollup 22 for Exchange Server 2010 SP3</a>
+    - name: Update Rollup 22 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 22 for Exchange Server 2010 SP3
+          short_code: 14.3.411.0
+          date: 2018-06-19
+          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57065"
+            data-linktype="external">Update Rollup 22 for Exchange Server 2010 SP3</a>
+        latest_release: 2018-06-19
       latest_release: 2018-06-19
-    - version:
-        name: Update Rollup 21 for Exchange Server 2010 SP3
-        short_code: 14.3.399.2
-        date: 2018-05-07
+    - name: Update Rollup 21 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 21 for Exchange Server 2010 SP3
+          short_code: 14.3.399.2
+          date: 2018-05-07
+        latest_release: 2018-05-07
       latest_release: 2018-05-07
-    - version:
-        name: Update Rollup 20 for Exchange Server 2010 SP3
-        short_code: 14.3.389.1
-        date: 2018-03-05
+    - name: Update Rollup 20 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 20 for Exchange Server 2010 SP3
+          short_code: 14.3.389.1
+          date: 2018-03-05
+        latest_release: 2018-03-05
       latest_release: 2018-03-05
-    - version:
-        name: Update Rollup 19 for Exchange Server 2010 SP3
-        short_code: 14.3.382.0
-        date: 2017-12-19
+    - name: Update Rollup 19 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 19 for Exchange Server 2010 SP3
+          short_code: 14.3.382.0
+          date: 2017-12-19
+        latest_release: 2017-12-19
       latest_release: 2017-12-19
-    - version:
-        name: Update Rollup 18 for Exchange Server 2010 SP3
-        short_code: 14.3.361.1
-        date: 2017-07-11
+    - name: Update Rollup 18 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 18 for Exchange Server 2010 SP3
+          short_code: 14.3.361.1
+          date: 2017-07-11
+        latest_release: 2017-07-11
       latest_release: 2017-07-11
-    - version:
-        name: Update Rollup 17 for Exchange Server 2010 SP3
-        short_code: 14.3.352.0
-        date: 2017-03-21
+    - name: Update Rollup 17 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 17 for Exchange Server 2010 SP3
+          short_code: 14.3.352.0
+          date: 2017-03-21
+        latest_release: 2017-03-21
       latest_release: 2017-03-21
-    - version:
-        name: Update Rollup 16 for Exchange Server 2010 SP3
-        short_code: 14.3.336.0
-        date: 2016-12-13
+    - name: Update Rollup 16 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 16 for Exchange Server 2010 SP3
+          short_code: 14.3.336.0
+          date: 2016-12-13
+        latest_release: 2016-12-13
       latest_release: 2016-12-13
-    - version:
-        name: Update Rollup 5 for Exchange Server 2010 SP2
-        short_code: 14.3.328.5
-        date: 2012-11-13
+    - name: Update Rollup 5 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2010 SP2
+          short_code: 14.3.328.5
+          date: 2012-11-13
+        latest_release: 2012-11-13
       latest_release: 2012-11-13
-    - version:
-        name: Update Rollup 15 for Exchange Server 2010 SP3
-        short_code: 14.3.319.2
-        date: 2016-09-20
+    - name: Update Rollup 15 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 15 for Exchange Server 2010 SP3
+          short_code: 14.3.319.2
+          date: 2016-09-20
+        latest_release: 2016-09-20
       latest_release: 2016-09-20
-    - version:
-        name: Update Rollup 14 for Exchange Server 2010 SP3
-        short_code: 14.3.301.0
-        date: 2016-06-21
+    - name: Update Rollup 14 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 14 for Exchange Server 2010 SP3
+          short_code: 14.3.301.0
+          date: 2016-06-21
+        latest_release: 2016-06-21
       latest_release: 2016-06-21
-    - version:
-        name: Update Rollup 13 for Exchange Server 2010 SP3
-        short_code: 14.3.294.0
-        date: 2016-03-15
+    - name: Update Rollup 13 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 13 for Exchange Server 2010 SP3
+          short_code: 14.3.294.0
+          date: 2016-03-15
+        latest_release: 2016-03-15
       latest_release: 2016-03-15
-    - version:
-        name: Update Rollup 12 for Exchange Server 2010 SP3
-        short_code: 14.3.279.2
-        date: 2015-12-15
+    - name: Update Rollup 12 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 12 for Exchange Server 2010 SP3
+          short_code: 14.3.279.2
+          date: 2015-12-15
+        latest_release: 2015-12-15
       latest_release: 2015-12-15
-    - version:
-        name: Update Rollup 11 for Exchange Server 2010 SP3
-        short_code: 14.3.266.2
-        date: 2015-09-15
+    - name: Update Rollup 11 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 11 for Exchange Server 2010 SP3
+          short_code: 14.3.266.2
+          date: 2015-09-15
+        latest_release: 2015-09-15
       latest_release: 2015-09-15
-    - version:
-        name: Update Rollup 10 for Exchange Server 2010 SP3
-        short_code: 14.3.248.2
-        date: 2015-06-17
+    - name: Update Rollup 10 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 10 for Exchange Server 2010 SP3
+          short_code: 14.3.248.2
+          date: 2015-06-17
+        latest_release: 2015-06-17
       latest_release: 2015-06-17
-    - version:
-        name: Update Rollup 9 for Exchange Server 2010 SP3
-        short_code: 14.3.235.1
-        date: 2015-03-17
+    - name: Update Rollup 9 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 9 for Exchange Server 2010 SP3
+          short_code: 14.3.235.1
+          date: 2015-03-17
+        latest_release: 2015-03-17
       latest_release: 2015-03-17
-    - name: Update Rollup 8 v1 for Exchange Server 2010 SP3 (recalled)
-      html_name: Update Rollup 8 v1 for Exchange Server 2010 SP3 (<a href="https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-releases-december-2014/ba-p/584630"
-        data-linktype="external">recalled</a>)
+    - name: Update Rollup 8 v
       children:
       - version:
           name: Update Rollup 8 v2 for Exchange Server 2010 SP3
@@ -1388,69 +1535,105 @@
             data-linktype="external">recalled</a>)
         latest_release: 2014-12-09
       latest_release: 2014-12-12
-    - version:
-        name: Update Rollup 7 for Exchange Server 2010 SP3
-        short_code: 14.3.210.2
-        date: 2014-08-26
+    - name: Update Rollup 7 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 7 for Exchange Server 2010 SP3
+          short_code: 14.3.210.2
+          date: 2014-08-26
+        latest_release: 2014-08-26
       latest_release: 2014-08-26
-    - version:
-        name: Update Rollup 6 for Exchange Server 2010 SP3
-        short_code: 14.3.195.1
-        date: 2014-05-27
+    - name: Update Rollup 6 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 6 for Exchange Server 2010 SP3
+          short_code: 14.3.195.1
+          date: 2014-05-27
+        latest_release: 2014-05-27
       latest_release: 2014-05-27
-    - version:
-        name: Update Rollup 5 for Exchange Server 2010 SP3
-        short_code: 14.3.181.6
-        date: 2014-02-24
+    - name: Update Rollup 5 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2010 SP3
+          short_code: 14.3.181.6
+          date: 2014-02-24
+        latest_release: 2014-02-24
       latest_release: 2014-02-24
-    - version:
-        name: Update Rollup 4 for Exchange Server 2010 SP3
-        short_code: 14.3.174.1
-        date: 2013-12-09
+    - name: Update Rollup 4 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2010 SP3
+          short_code: 14.3.174.1
+          date: 2013-12-09
+        latest_release: 2013-12-09
       latest_release: 2013-12-09
-    - version:
-        name: Update Rollup 3 for Exchange Server 2010 SP3
-        short_code: 14.3.169.1
-        date: 2013-11-25
+    - name: Update Rollup 3 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2010 SP3
+          short_code: 14.3.169.1
+          date: 2013-11-25
+        latest_release: 2013-11-25
       latest_release: 2013-11-25
-    - version:
-        name: Update Rollup 2 for Exchange Server 2010 SP3
-        short_code: 14.3.158.1
-        date: 2013-08-08
+    - name: Update Rollup 2 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2010 SP3
+          short_code: 14.3.158.1
+          date: 2013-08-08
+        latest_release: 2013-08-08
       latest_release: 2013-08-08
-    - version:
-        name: Update Rollup 1 for Exchange Server 2010 SP3
-        short_code: 14.3.146.0
-        date: 2013-05-29
+    - name: Update Rollup 1 for Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2010 SP3
+          short_code: 14.3.146.0
+          date: 2013-05-29
+        latest_release: 2013-05-29
       latest_release: 2013-05-29
-    - version:
-        name: Exchange Server 2010 SP3
-        short_code: 14.3.123.4
-        date: 2013-02-12
+    - name: Exchange Server 2010 SP3
+      children:
+      - version:
+          name: Exchange Server 2010 SP3
+          short_code: 14.3.123.4
+          date: 2013-02-12
+        latest_release: 2013-02-12
       latest_release: 2013-02-12
     latest_release: 2021-03-02
   - children:
-    - version:
-        name: Update Rollup 8 for Exchange Server 2010 SP2
-        short_code: 14.2.390.3
-        date: 2013-12-09
+    - name: Update Rollup 8 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 8 for Exchange Server 2010 SP2
+          short_code: 14.2.390.3
+          date: 2013-12-09
+        latest_release: 2013-12-09
       latest_release: 2013-12-09
-    - version:
-        name: Update Rollup 7 for Exchange Server 2010 SP2
-        short_code: 14.2.375.0
-        date: 2013-08-03
+    - name: Update Rollup 7 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 7 for Exchange Server 2010 SP2
+          short_code: 14.2.375.0
+          date: 2013-08-03
+        latest_release: 2013-08-03
       latest_release: 2013-08-03
-    - version:
-        name: Update Rollup 6 Exchange Server 2010 SP2
-        short_code: 14.2.342.3
-        date: 2013-02-12
+    - name: Update Rollup 6 Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 6 Exchange Server 2010 SP2
+          short_code: 14.2.342.3
+          date: 2013-02-12
+        latest_release: 2013-02-12
       latest_release: 2013-02-12
-    - version:
-        name: Update Rollup 5 v2 for Exchange Server 2010 SP2
-        short_code: 14.2.328.10
-        date: 2012-12-10
+    - name: Update Rollup 5 v2 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 5 v2 for Exchange Server 2010 SP2
+          short_code: 14.2.328.10
+          date: 2012-12-10
+        latest_release: 2012-12-10
       latest_release: 2012-12-10
-    - name: Update Rollup 4 for Exchange Server 2010 SP2
+    - name: Update Rollup 4
       children:
       - version:
           name: Update Rollup 4 v2 for Exchange Server 2010 SP2
@@ -1463,34 +1646,49 @@
           date: 2012-08-13
         latest_release: 2012-08-13
       latest_release: 2012-10-09
-    - version:
-        name: Update Rollup 3 for Exchange Server 2010 SP2
-        short_code: 14.2.309.2
-        date: 2012-05-29
+    - name: Update Rollup 3 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2010 SP2
+          short_code: 14.2.309.2
+          date: 2012-05-29
+        latest_release: 2012-05-29
       latest_release: 2012-05-29
-    - version:
-        name: Update Rollup 2 for Exchange Server 2010 SP2
-        short_code: 14.2.298.4
-        date: 2012-04-16
+    - name: Update Rollup 2 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2010 SP2
+          short_code: 14.2.298.4
+          date: 2012-04-16
+        latest_release: 2012-04-16
       latest_release: 2012-04-16
-    - version:
-        name: Update Rollup 1 for Exchange Server 2010 SP2
-        short_code: 14.2.283.3
-        date: 2012-02-13
+    - name: Update Rollup 1 for Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2010 SP2
+          short_code: 14.2.283.3
+          date: 2012-02-13
+        latest_release: 2012-02-13
       latest_release: 2012-02-13
-    - version:
-        name: Exchange Server 2010 SP2
-        short_code: 14.2.247.5
-        date: 2011-12-04
+    - name: Exchange Server 2010 SP2
+      children:
+      - version:
+          name: Exchange Server 2010 SP2
+          short_code: 14.2.247.5
+          date: 2011-12-04
+        latest_release: 2011-12-04
       latest_release: 2011-12-04
     latest_release: 2013-12-09
   - children:
-    - version:
-        name: Update Rollup 8 for Exchange Server 2010 SP1
-        short_code: 14.1.438.0
-        date: 2012-12-10
+    - name: Update Rollup 8 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 8 for Exchange Server 2010 SP1
+          short_code: 14.1.438.0
+          date: 2012-12-10
+        latest_release: 2012-12-10
       latest_release: 2012-12-10
-    - name: Update Rollup 7 for Exchange Server 2010 SP1
+    - name: Update Rollup 7
       children:
       - version:
           name: Update Rollup 7 v3 for Exchange Server 2010 SP1
@@ -1508,155 +1706,238 @@
           date: 2012-08-08
         latest_release: 2012-08-08
       latest_release: 2012-11-13
-    - version:
-        name: Update Rollup 6 for Exchange Server 2010 SP1
-        short_code: 14.1.355.2
-        date: 2011-10-27
+    - name: Update Rollup 6 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 6 for Exchange Server 2010 SP1
+          short_code: 14.1.355.2
+          date: 2011-10-27
+        latest_release: 2011-10-27
       latest_release: 2011-10-27
-    - version:
-        name: Update Rollup 5 for Exchange Server 2010 SP1
-        short_code: 14.1.339.1
-        date: 2011-08-23
+    - name: Update Rollup 5 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2010 SP1
+          short_code: 14.1.339.1
+          date: 2011-08-23
+        latest_release: 2011-08-23
       latest_release: 2011-08-23
-    - version:
-        name: Update Rollup 4 for Exchange Server 2010 SP1
-        short_code: 14.1.323.6
-        date: 2011-07-27
+    - name: Update Rollup 4 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2010 SP1
+          short_code: 14.1.323.6
+          date: 2011-07-27
+        latest_release: 2011-07-27
       latest_release: 2011-07-27
-    - version:
-        name: Update Rollup 3 for Exchange Server 2010 SP1
-        short_code: 14.1.289.7
-        date: 2011-04-06
+    - name: Update Rollup 3 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2010 SP1
+          short_code: 14.1.289.7
+          date: 2011-04-06
+        latest_release: 2011-04-06
       latest_release: 2011-04-06
-    - version:
-        name: Update Rollup 2 for Exchange Server 2010 SP1
-        short_code: 14.1.270.1
-        date: 2010-12-09
+    - name: Update Rollup 2 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2010 SP1
+          short_code: 14.1.270.1
+          date: 2010-12-09
+        latest_release: 2010-12-09
       latest_release: 2010-12-09
-    - version:
-        name: Update Rollup 1 for Exchange Server 2010 SP1
-        short_code: 14.1.255.2
-        date: 2010-10-04
+    - name: Update Rollup 1 for Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2010 SP1
+          short_code: 14.1.255.2
+          date: 2010-10-04
+        latest_release: 2010-10-04
       latest_release: 2010-10-04
-    - version:
-        name: Exchange Server 2010 SP1
-        short_code: 14.1.218.15
-        date: 2010-08-23
+    - name: Exchange Server 2010 SP1
+      children:
+      - version:
+          name: Exchange Server 2010 SP1
+          short_code: 14.1.218.15
+          date: 2010-08-23
+        latest_release: 2010-08-23
       latest_release: 2010-08-23
     latest_release: 2012-12-10
-  - name: Exchange Server 2010 RTM
-    children:
-    - version:
-        name: Update Rollup 5 for Exchange Server 2010
-        short_code: 14.0.726.0
-        date: 2010-12-13
+  - children:
+    - name: Update Rollup 5 for Exchange Server 2010
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2010
+          short_code: 14.0.726.0
+          date: 2010-12-13
+        latest_release: 2010-12-13
       latest_release: 2010-12-13
-    - version:
-        name: Update Rollup 4 for Exchange Server 2010
-        short_code: 14.0.702.1
-        date: 2010-06-10
+    - name: Update Rollup 4 for Exchange Server 2010
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2010
+          short_code: 14.0.702.1
+          date: 2010-06-10
+        latest_release: 2010-06-10
       latest_release: 2010-06-10
-    - version:
-        name: Update Rollup 3 for Exchange Server 2010
-        short_code: 14.0.694.0
-        date: 2010-04-13
+    - name: Update Rollup 3 for Exchange Server 2010
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2010
+          short_code: 14.0.694.0
+          date: 2010-04-13
+        latest_release: 2010-04-13
       latest_release: 2010-04-13
-    - version:
-        name: Update Rollup 2 for Exchange Server 2010
-        short_code: 14.0.689.0
-        date: 2010-03-04
+    - name: Update Rollup 2 for Exchange Server 2010
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2010
+          short_code: 14.0.689.0
+          date: 2010-03-04
+        latest_release: 2010-03-04
       latest_release: 2010-03-04
-    - version:
-        name: Update Rollup 1 for Exchange Server 2010
-        short_code: 14.0.682.1
-        date: 2009-12-09
+    - name: Update Rollup 1 for Exchange Server 2010
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2010
+          short_code: 14.0.682.1
+          date: 2009-12-09
+        latest_release: 2009-12-09
       latest_release: 2009-12-09
-    - version:
-        name: Exchange Server 2010 RTM
-        short_code: 14.0.639.21
-        date: 2009-11-09
+    - name: Exchange Server 2010 RTM
+      children:
+      - version:
+          name: Exchange Server 2010 RTM
+          short_code: 14.0.639.21
+          date: 2009-11-09
+        latest_release: 2009-11-09
       latest_release: 2009-11-09
     latest_release: 2010-12-13
   latest_release: 2021-03-02
 - name: Exchange Server 2007
   children:
   - children:
-    - version:
-        name: Update Rollup 23 for Exchange Server 2007 SP3
-        short_code: 8.3.517.0
-        date: 2017-03-21
+    - name: Update Rollup 23 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 23 for Exchange Server 2007 SP3
+          short_code: 8.3.517.0
+          date: 2017-03-21
+        latest_release: 2017-03-21
       latest_release: 2017-03-21
-    - version:
-        name: Update Rollup 22 for Exchange Server 2007 SP3
-        short_code: 8.3.502.0
-        date: 2016-12-13
+    - name: Update Rollup 22 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 22 for Exchange Server 2007 SP3
+          short_code: 8.3.502.0
+          date: 2016-12-13
+        latest_release: 2016-12-13
       latest_release: 2016-12-13
-    - version:
-        name: Update Rollup 21 for Exchange Server 2007 SP3
-        short_code: 8.3.485.1
-        date: 2016-09-20
+    - name: Update Rollup 21 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 21 for Exchange Server 2007 SP3
+          short_code: 8.3.485.1
+          date: 2016-09-20
+        latest_release: 2016-09-20
       latest_release: 2016-09-20
-    - version:
-        name: Update Rollup 20 for Exchange Server 2007 SP3
-        short_code: 8.3.468.0
-        date: 2016-06-21
+    - name: Update Rollup 20 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 20 for Exchange Server 2007 SP3
+          short_code: 8.3.468.0
+          date: 2016-06-21
+        latest_release: 2016-06-21
       latest_release: 2016-06-21
-    - version:
-        name: Update Rollup 19 forExchange Server 2007 SP3
-        short_code: 8.3.459.0
-        date: 2016-03-15
+    - name: Update Rollup 19 forExchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 19 forExchange Server 2007 SP3
+          short_code: 8.3.459.0
+          date: 2016-03-15
+        latest_release: 2016-03-15
       latest_release: 2016-03-15
-    - version:
-        name: Update Rollup 18 forExchange Server 2007 SP3
-        short_code: 8.3.445.0
-        date_str: 2015-12
+    - name: Update Rollup 18 forExchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 18 forExchange Server 2007 SP3
+          short_code: 8.3.445.0
+          date_str: 2015-12
+        latest_release_str: 2015-12
       latest_release_str: 2015-12
-    - version:
-        name: Update Rollup 17 forExchange Server 2007 SP3
-        short_code: 8.3.417.1
-        date: 2015-06-17
+    - name: Update Rollup 17 forExchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 17 forExchange Server 2007 SP3
+          short_code: 8.3.417.1
+          date: 2015-06-17
+        latest_release: 2015-06-17
       latest_release: 2015-06-17
-    - version:
-        name: Update Rollup 16 for Exchange Server 2007 SP3
-        short_code: 8.3.406.0
-        date: 2015-03-17
+    - name: Update Rollup 16 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 16 for Exchange Server 2007 SP3
+          short_code: 8.3.406.0
+          date: 2015-03-17
+        latest_release: 2015-03-17
       latest_release: 2015-03-17
-    - version:
-        name: Update Rollup 15 for Exchange Server 2007 SP3
-        short_code: 8.3.389.2
-        date: 2014-12-09
+    - name: Update Rollup 15 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 15 for Exchange Server 2007 SP3
+          short_code: 8.3.389.2
+          date: 2014-12-09
+        latest_release: 2014-12-09
       latest_release: 2014-12-09
-    - version:
-        name: Update Rollup 14 for Exchange Server 2007 SP3
-        short_code: 8.3.379.2
-        date: 2014-08-26
+    - name: Update Rollup 14 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 14 for Exchange Server 2007 SP3
+          short_code: 8.3.379.2
+          date: 2014-08-26
+        latest_release: 2014-08-26
       latest_release: 2014-08-26
-    - version:
-        name: Update Rollup 13 for Exchange Server 2007 SP3
-        short_code: 8.3.348.2
-        date: 2014-02-24
+    - name: Update Rollup 13 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 13 for Exchange Server 2007 SP3
+          short_code: 8.3.348.2
+          date: 2014-02-24
+        latest_release: 2014-02-24
       latest_release: 2014-02-24
-    - version:
-        name: Update Rollup 12 for Exchange Server 2007 SP3
-        short_code: 8.3.342.4
-        date: 2013-12-09
+    - name: Update Rollup 12 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 12 for Exchange Server 2007 SP3
+          short_code: 8.3.342.4
+          date: 2013-12-09
+        latest_release: 2013-12-09
       latest_release: 2013-12-09
-    - version:
-        name: Update Rollup 11 for Exchange Server 2007 SP3
-        short_code: 8.3.327.1
-        date: 2013-08-13
+    - name: Update Rollup 11 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 11 for Exchange Server 2007 SP3
+          short_code: 8.3.327.1
+          date: 2013-08-13
+        latest_release: 2013-08-13
       latest_release: 2013-08-13
-    - version:
-        name: Update Rollup 10 for Exchange Server 2007 SP3
-        short_code: 8.3.298.3
-        date: 2013-02-11
+    - name: Update Rollup 10 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 10 for Exchange Server 2007 SP3
+          short_code: 8.3.298.3
+          date: 2013-02-11
+        latest_release: 2013-02-11
       latest_release: 2013-02-11
-    - version:
-        name: Update Rollup 9 for Exchange Server 2007 SP3
-        short_code: 8.3.297.2
-        date: 2012-12-10
+    - name: Update Rollup 9 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 9 for Exchange Server 2007 SP3
+          short_code: 8.3.297.2
+          date: 2012-12-10
+        latest_release: 2012-12-10
       latest_release: 2012-12-10
-    - name: Update Rollup 8 for Exchange Server 2007 SP3
+    - name: Update Rollup 8
       children:
       - version:
           name: Update Rollup 8-v3 for Exchange Server 2007 SP3
@@ -1674,179 +1955,275 @@
           date: 2012-08-13
         latest_release: 2012-08-13
       latest_release: 2012-11-13
-    - version:
-        name: Update Rollup 7 for Exchange Server 2007 SP3
-        short_code: 8.3.264.0
-        date: 2012-04-16
+    - name: Update Rollup 7 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 7 for Exchange Server 2007 SP3
+          short_code: 8.3.264.0
+          date: 2012-04-16
+        latest_release: 2012-04-16
       latest_release: 2012-04-16
-    - version:
-        name: Update Rollup 6 for Exchange Server 2007 SP3
-        short_code: 8.3.245.2
-        date: 2012-01-26
+    - name: Update Rollup 6 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 6 for Exchange Server 2007 SP3
+          short_code: 8.3.245.2
+          date: 2012-01-26
+        latest_release: 2012-01-26
       latest_release: 2012-01-26
-    - version:
-        name: Update Rollup 5 for Exchange Server 2007 SP3
-        short_code: 8.3.213.1
-        date: 2011-09-21
+    - name: Update Rollup 5 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2007 SP3
+          short_code: 8.3.213.1
+          date: 2011-09-21
+        latest_release: 2011-09-21
       latest_release: 2011-09-21
-    - version:
-        name: Update Rollup 4 for Exchange Server 2007 SP3
-        short_code: 8.3.192.1
-        date: 2011-05-28
+    - name: Update Rollup 4 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2007 SP3
+          short_code: 8.3.192.1
+          date: 2011-05-28
+        latest_release: 2011-05-28
       latest_release: 2011-05-28
-    - version:
-        name: Update Rollup 3-v2 for Exchange Server 2007 SP3
-        short_code: 8.3.159.2
-        date: 2011-03-30
+    - name: Update Rollup 3-v2 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 3-v2 for Exchange Server 2007 SP3
+          short_code: 8.3.159.2
+          date: 2011-03-30
+        latest_release: 2011-03-30
       latest_release: 2011-03-30
-    - version:
-        name: Update Rollup 2 for Exchange Server 2007 SP3
-        short_code: 8.3.137.3
-        date: 2010-12-10
+    - name: Update Rollup 2 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2007 SP3
+          short_code: 8.3.137.3
+          date: 2010-12-10
+        latest_release: 2010-12-10
       latest_release: 2010-12-10
-    - version:
-        name: Update Rollup 1 for Exchange Server 2007 SP3
-        short_code: 8.3.106.2
-        date: 2010-09-09
+    - name: Update Rollup 1 for Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2007 SP3
+          short_code: 8.3.106.2
+          date: 2010-09-09
+        latest_release: 2010-09-09
       latest_release: 2010-09-09
-    - version:
-        name: Exchange Server 2007 SP3
-        short_code: 8.3.83.6
-        date: 2010-06-07
+    - name: Exchange Server 2007 SP3
+      children:
+      - version:
+          name: Exchange Server 2007 SP3
+          short_code: 8.3.83.6
+          date: 2010-06-07
+        latest_release: 2010-06-07
       latest_release: 2010-06-07
     latest_release: 2017-03-21
-  - name: Exchange Server 2007 SP2
-    children:
-    - version:
-        name: Update Rollup 5 for Exchange Server 2007 SP2
-        short_code: 8.2.305.3
-        date: 2010-12-07
+  - children:
+    - name: Update Rollup 5 for Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2007 SP2
+          short_code: 8.2.305.3
+          date: 2010-12-07
+        latest_release: 2010-12-07
       latest_release: 2010-12-07
-    - version:
-        name: Update Rollup 4 for Exchange Server 2007 SP2
-        short_code: 8.2.254.0
-        date: 2010-04-09
+    - name: Update Rollup 4 for Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2007 SP2
+          short_code: 8.2.254.0
+          date: 2010-04-09
+        latest_release: 2010-04-09
       latest_release: 2010-04-09
-    - version:
-        name: Update Rollup 3 for Exchange Server 2007 SP2
-        short_code: 8.2.247.2
-        date: 2010-03-17
+    - name: Update Rollup 3 for Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2007 SP2
+          short_code: 8.2.247.2
+          date: 2010-03-17
+        latest_release: 2010-03-17
       latest_release: 2010-03-17
-    - version:
-        name: Update Rollup 2 for Exchange Server 2007 SP2
-        short_code: 8.2.234.1
-        date: 2010-01-22
+    - name: Update Rollup 2 for Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2007 SP2
+          short_code: 8.2.234.1
+          date: 2010-01-22
+        latest_release: 2010-01-22
       latest_release: 2010-01-22
-    - version:
-        name: Update Rollup 1 for Exchange Server 2007 SP2
-        short_code: 8.2.217.3
-        date: 2009-11-19
+    - name: Update Rollup 1 for Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2007 SP2
+          short_code: 8.2.217.3
+          date: 2009-11-19
+        latest_release: 2009-11-19
       latest_release: 2009-11-19
-    - version:
-        name: Exchange Server 2007 SP2
-        short_code: 8.2.176.2
-        date: 2009-08-24
+    - name: Exchange Server 2007 SP2
+      children:
+      - version:
+          name: Exchange Server 2007 SP2
+          short_code: 8.2.176.2
+          date: 2009-08-24
+        latest_release: 2009-08-24
       latest_release: 2009-08-24
     latest_release: 2010-12-07
-  - name: Exchange Server 2007 SP1
-    children:
-    - version:
-        name: Update Rollup 10 for Exchange Server 2007 SP1
-        short_code: 8.1.436.0
-        date: 2010-04-13
+  - children:
+    - name: Update Rollup 10 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 10 for Exchange Server 2007 SP1
+          short_code: 8.1.436.0
+          date: 2010-04-13
+        latest_release: 2010-04-13
       latest_release: 2010-04-13
-    - version:
-        name: Update Rollup 9 for Exchange Server 2007 SP1
-        short_code: 8.1.393.1
-        date: 2009-07-16
+    - name: Update Rollup 9 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 9 for Exchange Server 2007 SP1
+          short_code: 8.1.393.1
+          date: 2009-07-16
+        latest_release: 2009-07-16
       latest_release: 2009-07-16
-    - version:
-        name: Update Rollup 8 for Exchange Server 2007 SP1
-        short_code: 8.1.375.2
-        date: 2009-05-19
+    - name: Update Rollup 8 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 8 for Exchange Server 2007 SP1
+          short_code: 8.1.375.2
+          date: 2009-05-19
+        latest_release: 2009-05-19
       latest_release: 2009-05-19
-    - version:
-        name: Update Rollup 7 for Exchange Server 2007 SP1
-        short_code: 8.1.359.2
-        date: 2009-03-18
+    - name: Update Rollup 7 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 7 for Exchange Server 2007 SP1
+          short_code: 8.1.359.2
+          date: 2009-03-18
+        latest_release: 2009-03-18
       latest_release: 2009-03-18
-    - version:
-        name: Update Rollup 6 for Exchange Server 2007 SP1
-        short_code: 8.1.340.1
-        date: 2009-02-10
+    - name: Update Rollup 6 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 6 for Exchange Server 2007 SP1
+          short_code: 8.1.340.1
+          date: 2009-02-10
+        latest_release: 2009-02-10
       latest_release: 2009-02-10
-    - version:
-        name: Update Rollup 5 for Exchange Server 2007 SP1
-        short_code: 8.1.336.1
-        date: 2008-11-20
+    - name: Update Rollup 5 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2007 SP1
+          short_code: 8.1.336.1
+          date: 2008-11-20
+        latest_release: 2008-11-20
       latest_release: 2008-11-20
-    - version:
-        name: Update Rollup 4 for Exchange Server 2007 SP1
-        short_code: 8.1.311.3
-        date: 2008-10-07
+    - name: Update Rollup 4 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2007 SP1
+          short_code: 8.1.311.3
+          date: 2008-10-07
+        latest_release: 2008-10-07
       latest_release: 2008-10-07
-    - version:
-        name: Update Rollup 3 for Exchange Server 2007 SP1
-        short_code: 8.1.291.2
-        date: 2008-07-08
+    - name: Update Rollup 3 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2007 SP1
+          short_code: 8.1.291.2
+          date: 2008-07-08
+        latest_release: 2008-07-08
       latest_release: 2008-07-08
-    - version:
-        name: Update Rollup 2 for Exchange Server 2007 SP1
-        short_code: 8.1.278.2
-        date: 2008-05-09
+    - name: Update Rollup 2 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2007 SP1
+          short_code: 8.1.278.2
+          date: 2008-05-09
+        latest_release: 2008-05-09
       latest_release: 2008-05-09
-    - version:
-        name: Update Rollup 1 for Exchange Server 2007 SP1
-        short_code: 8.1.263.1
-        date: 2008-02-28
+    - name: Update Rollup 1 for Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2007 SP1
+          short_code: 8.1.263.1
+          date: 2008-02-28
+        latest_release: 2008-02-28
       latest_release: 2008-02-28
-    - version:
-        name: Exchange Server 2007 SP1
-        short_code: 8.1.240.6
-        date: 2007-11-29
+    - name: Exchange Server 2007 SP1
+      children:
+      - version:
+          name: Exchange Server 2007 SP1
+          short_code: 8.1.240.6
+          date: 2007-11-29
+        latest_release: 2007-11-29
       latest_release: 2007-11-29
     latest_release: 2010-04-13
-  - name: Exchange Server 2007 RTM
-    children:
-    - version:
-        name: Update Rollup 7 for Exchange Server 2007
-        short_code: 8.0.813.0
-        date: 2008-07-08
+  - children:
+    - name: Update Rollup 7 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 7 for Exchange Server 2007
+          short_code: 8.0.813.0
+          date: 2008-07-08
+        latest_release: 2008-07-08
       latest_release: 2008-07-08
-    - version:
-        name: Update Rollup 6 for Exchange Server 2007
-        short_code: 8.0.783.2
-        date: 2008-02-21
+    - name: Update Rollup 6 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 6 for Exchange Server 2007
+          short_code: 8.0.783.2
+          date: 2008-02-21
+        latest_release: 2008-02-21
       latest_release: 2008-02-21
-    - version:
-        name: Update Rollup 5 for Exchange Server 2007
-        short_code: 8.0.754.0
-        date: 2007-10-25
+    - name: Update Rollup 5 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 5 for Exchange Server 2007
+          short_code: 8.0.754.0
+          date: 2007-10-25
+        latest_release: 2007-10-25
       latest_release: 2007-10-25
-    - version:
-        name: Update Rollup 4 for Exchange Server 2007
-        short_code: 8.0.744.0
-        date: 2007-08-23
+    - name: Update Rollup 4 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 4 for Exchange Server 2007
+          short_code: 8.0.744.0
+          date: 2007-08-23
+        latest_release: 2007-08-23
       latest_release: 2007-08-23
-    - version:
-        name: Update Rollup 3 for Exchange Server 2007
-        short_code: 8.0.730.1
-        date: 2007-06-28
+    - name: Update Rollup 3 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 3 for Exchange Server 2007
+          short_code: 8.0.730.1
+          date: 2007-06-28
+        latest_release: 2007-06-28
       latest_release: 2007-06-28
-    - version:
-        name: Update Rollup 2 for Exchange Server 2007
-        short_code: 8.0.711.2
-        date: 2007-05-08
+    - name: Update Rollup 2 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 2 for Exchange Server 2007
+          short_code: 8.0.711.2
+          date: 2007-05-08
+        latest_release: 2007-05-08
       latest_release: 2007-05-08
-    - version:
-        name: Update Rollup 1 for Exchange Server 2007
-        short_code: 8.0.708.3
-        date: 2007-04-17
+    - name: Update Rollup 1 for Exchange Server 2007
+      children:
+      - version:
+          name: Update Rollup 1 for Exchange Server 2007
+          short_code: 8.0.708.3
+          date: 2007-04-17
+        latest_release: 2007-04-17
       latest_release: 2007-04-17
-    - version:
-        name: Exchange Server 2007 RTM
-        short_code: 8.0.685.25
-        date: 2007-03-08
+    - name: Exchange Server 2007 RTM
+      children:
+      - version:
+          name: Exchange Server 2007 RTM
+          short_code: 8.0.685.25
+          date: 2007-03-08
+        latest_release: 2007-03-08
       latest_release: 2007-03-08
     latest_release: 2008-07-08
   latest_release: 2017-03-21
@@ -1857,15 +2234,21 @@
       short_code: 6.5.7683
       date: 2005-10-19
     latest_release: 2005-10-19
-  - version:
-      name: Exchange Server 2003 post-SP2
-      short_code: 6.5.7654.4
-      date_str: 2008-08
+  - name: Exchange Server 2003 post-SP2
+    children:
+    - version:
+        name: Exchange Server 2003 post-SP2
+        short_code: 6.5.7654.4
+        date_str: 2008-08
+      latest_release_str: 2008-08
     latest_release_str: 2008-08
-  - version:
-      name: Exchange Server 2003 post-SP2
-      short_code: 6.5.7653.33
-      date_str: 2008-03
+  - name: Exchange Server 2003 post-SP2
+    children:
+    - version:
+        name: Exchange Server 2003 post-SP2
+        short_code: 6.5.7653.33
+        date_str: 2008-03
+      latest_release_str: 2008-03
     latest_release_str: 2008-03
   - version:
       name: Exchange Server 2003 SP1
