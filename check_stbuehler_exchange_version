@@ -189,13 +189,15 @@ class Tree(yaml.YAMLObject):
 			return self.latest_release.strftime('%Y-%m-%d')
 		return None
 
+	def latest_child(self) -> Tree | None:
+		if not self.children:
+			return None
+		return max(self.children, key=lambda t: t.path)
+
 	def latest(self) -> typing.Optional['Version']:
-		if self.children:
-			l = max(self.children, key=lambda t: t.path)
-			if l:
-				v = l.latest()
-				if v:
-					return v
+		l = self.latest_child()
+		if l:
+			return l.latest() or self.version
 		return self.version
 
 	def _is_flat_version(self):
