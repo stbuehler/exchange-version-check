@@ -9,6 +9,7 @@ from __future__ import annotations
 import dataclasses
 import datetime
 import json
+import os.path
 import re
 import typing
 import yaml
@@ -245,8 +246,14 @@ class Tree(yaml.YAMLObject):
 			if not node._is_flat_version():
 				guess_name = False
 		if guess_name and (not self.name) and (not self.version) and len(self.children):
-			self.name = self.children[-1].version.name
-			self.html_name = self.children[-1].version.html_name
+			common_name = os.path.commonprefix(
+				[child.version.name for child in self.children]
+			).strip()
+			if common_name.startswith(self.parent.name):
+				self.name = common_name
+			else:
+				self.name = self.children[-1].version.name
+				self.html_name = self.children[-1].version.html_name
 		if calc_release_date and len(release_dates):
 			d, d_str = max(release_dates)
 			self.latest_release = d.replace()  # clone date
