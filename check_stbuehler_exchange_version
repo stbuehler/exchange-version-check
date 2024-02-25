@@ -189,6 +189,14 @@ class Tree(yaml.YAMLObject):
 			return self.latest_release.strftime('%Y-%m-%d')
 		return None
 
+	@property
+	def real_name(self) -> str:
+		"""
+		In the yaml export only nodes without a version get a name.
+		This returns the name of either the version or the node.
+		"""
+		return self.version.name if self.version else self.name
+
 	def latest_child(self) -> Tree | None:
 		if not self.children:
 			return None
@@ -383,6 +391,35 @@ class TreeBuilder(yaml.YAMLObject):
 		return root
 
 
+def parse_supported_cu_versions(args: argparse.Namespace) -> dict[str, list[str]]:
+	ms_release_list = requests.get(args.supported_cu_source)
+	versions = {}
+
+	parts = iter(re.split(r'(<h2\s.*?>)', ms_release_list.content.decode('utf-8')))
+	next(parts)
+	while True:
+		try:
+			head = next(parts)
+		except StopIteration:
+			return versions
+		body = next(parts)
+		if 'supported-versions-and-builds' in head:
+			break
+
+	def clean_html(html: str) -> str:
+		html = re.sub('<\s*br\s*/?>', '\n', html)
+		html = re.sub(r'[ \t]*(?:<.*?>)+[ \t]*', ' ', html)
+		return html.strip()
+
+	table = HtmlTable.find_first(body)
+	for row in table:
+		cells = [clean_html(s) for s in row]
+		exch_version = cells[0]
+		supported_cus = re.findall(r'\bCU\d+\b', cells[1])
+		versions[exch_version] = supported_cus
+	return versions
+
+
 @dataclasses.dataclass
 class Trees:
 	trees: typing.List[Tree]
@@ -403,15 +440,35 @@ class Trees:
 		for tree in self.trees:
 			tree.calc_alive_heuristic()
 
+	def calc_alive_supported_cus(self, supported_cus: dict[str, list[str]]) -> None:
+		by_version = { tree.real_name: tree for tree in self.trees }
+		for vers_name, cus in supported_cus.items():
+			version = by_version.get(vers_name)
+			if version is None:
+				pass
+			version.alive = True
+			for cu in cus:
+				for subversion in version.children:
+					if cu in subversion.real_name:
+						while subversion:
+							subversion.alive = True
+							subversion = subversion.latest_child()
+
 	@staticmethod
 	def load(args: argparse.Namespace) -> 'Trees':
+		supported_cus = parse_supported_cu_versions(args)
+
 		ms_release_list = requests.get(args.source)
 		# assume content is utf-8 (html meta), although not specified in http content-type:
 		versions = list(Version.scan(ms_release_list.content.decode('utf-8')))
 
 		root = TreeBuilder.from_versions(versions)
 		trees = Trees(trees=root.children, versions={v.short_code: v for v in versions})
-		trees.calc_alive_heuristic()
+		if supported_cus:
+			trees.calc_alive_supported_cus(supported_cus)
+		else:
+			# fallback to heuristic if we couldn't parse the supported CU versions
+			trees.calc_alive_heuristic()
 		return trees
 
 
@@ -519,6 +576,7 @@ def parser_add_help(parser: argparse.ArgumentParser):
 def main():
 	# MS killed https://github.com/MicrosoftDocs/OfficeDocs-Exchange, so now we have to parse html
 	DEFAULT_MS_RELEASES_SOURCE = 'https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates'
+	DEFAULT_MS_SUPPORTED_CU_SOURCE = 'https://learn.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix'
 	DEFAULT_ALIVE_SOURCE = 'https://stbuehler.github.io/exchange-version-check/alive.json'
 
 	parser = argparse.ArgumentParser('check_stbuehler_exchange_version', add_help=False)
@@ -529,10 +587,12 @@ def main():
 	pages = subs.add_parser('pages', help='Generate machine and human readable files', add_help=False)
 	parser_add_help(pages)
 	pages.add_argument('--source', default=DEFAULT_MS_RELEASES_SOURCE)
+	pages.add_argument('--supported-cu-source', default=DEFAULT_MS_SUPPORTED_CU_SOURCE)
 
 	check = subs.add_parser('check', help='Default subcommand: check an exchange server version', add_help=False)
 	parser_add_help(check)
 	check.add_argument('--source', default=DEFAULT_MS_RELEASES_SOURCE)
+	check.add_argument('--supported-cu-source', default=DEFAULT_MS_SUPPORTED_CU_SOURCE)
 	check.add_argument('-c', '--cached-alive', action='store_true', help='Use cached alive versions')
 	check.add_argument('--alive-source', default=DEFAULT_ALIVE_SOURCE)
 	check.add_argument('-h', '--host', required=True, help='Exchange host to check')

@@ -15,10 +15,6 @@ Currently looks for the `X-OWA-Version` header in the response for `http[s]://se
 
 Create machine (and human) readable list of exchange versions with an heuristic flag whether they are good to use.
 
-Heuristic is as follows:
+Versions are parsed from <https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates>.
 
-- must be less than 180 days old
-- must be less than 31 days older than a release on a neighbor branch
-- always require latest SU in a branch
-
-Versions are parsed from https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates (sadly Microsoft killed the https://github.com/MicrosoftDocs/OfficeDocs-Exchange repository with the markdown source).
+Supported CU versions are parsed from <https://learn.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix>.
