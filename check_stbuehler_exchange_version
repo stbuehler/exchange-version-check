@@ -334,11 +334,16 @@ class TreeBuilder(yaml.YAMLObject):
 					yield tt
 
 	def _flatten_tree(self) -> Tree:
+		"""
+		Remove "insignificant" (no name, no version) nodes with less one children from the tree,
+		building a shortcut to the child node.
+		"""
 		children = [
 			node._flatten_tree()
 			for _key, node in sorted(self.children.items(), reverse=True)
 		]
 		if not self.name and not self.version and len(children) == 1:
+			# remove `self` from tree, skip directly to subtree
 			return children[0]
 		tree = Tree(
 			path=self.path,
