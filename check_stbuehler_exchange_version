@@ -4,6 +4,8 @@
 # License: MIT (https://en.wikipedia.org/wiki/MIT_License)
 # Upstream: https://github.com/stbuehler/exchange-version-check
 
+from __future__ import annotations
+
 import dataclasses
 import datetime
 import json
@@ -13,6 +15,39 @@ import yaml
 import requests
 import argparse
 import sys
+
+
+class HtmlRow:
+	def __init__(self, html: str) -> None:
+		self.html = html
+
+	def __iter__(self) -> typing.Iterator[str]:
+		return iter(re.findall(r'<td(?:\s[^>]*)?>(.*?)</td>', self.html, re.DOTALL|re.IGNORECASE))
+
+
+class HtmlTable:
+	def __init__(self, html: str, *, skip_head_rows: int = 1) -> None:
+		self.html = html
+		self.skip_head_rows = skip_head_rows
+
+	def __iter__(self) -> typing.Iterator[HtmlRow]:
+		rows = re.findall(r'<tr(?:\s[^>]*)?>(.*?)</tr>', self.html, re.DOTALL|re.IGNORECASE)
+		rows = rows[self.skip_head_rows:]  # skip header
+		for row in rows:
+			yield HtmlRow(html=row)
+
+	@staticmethod
+	def find_first(html: str) -> HtmlTable:
+		table = re.search(r'<table(?:\s[^>]*)?>(.*?)</table>', html, re.DOTALL|re.IGNORECASE)
+		if table is None:
+			return ValueError("No <table> found")
+		return HtmlTable(html=table.group(1))
+
+	@staticmethod
+	def find_all(html: str) -> typing.Iterator[HtmlTable]:
+		tables = re.findall(r'<table(?:\s[^>]*)?>(.*?)</table>', html, re.DOTALL|re.IGNORECASE)
+		for table in tables:
+			yield HtmlTable(html=table)
 
 
 _MATCH_HTML_LINK = re.compile(r'<a(?:\s+(?:href="(.*)"|\S+))*>(.*)</a>', re.DOTALL|re.IGNORECASE)
@@ -83,8 +118,8 @@ class Version:
 		return (f'Unknown: {col}', None)
 
 	@staticmethod
-	def parse_table_row(row: str) -> typing.Optional['Version']:
-		cols = re.findall(r'<td(?:\s[^>]*)?>(.*?)</td>', row, re.DOTALL|re.IGNORECASE)
+	def parse_table_row(row: HtmlRow) -> typing.Optional['Version']:
+		cols = list(row)
 		assert len(cols) >= 3, f"Unexpected table row: {row!r}"
 		if not cols[0] and not cols[1] and not cols[2]:
 			return None
@@ -102,12 +137,10 @@ class Version:
 
 	@staticmethod
 	def scan(input: str):
-		tables = re.findall(r'<table(?:\s[^>]*)?>(.*?)</table>', input, re.DOTALL|re.IGNORECASE)
-		for table in tables:
-			if not '<th>Product name</th>' in table:
+		for table in HtmlTable.find_all(input):
+			if not '<th>Product name</th>' in table.html:
 				continue
-			rows = re.findall(r'<tr(?:\s[^>]*)?>(.*?)</tr>', table, re.DOTALL|re.IGNORECASE)[1:]  # skip header
-			for row in rows:
+			for row in table:
 				version = Version.parse_table_row(row)
 				if version:
 					yield version
