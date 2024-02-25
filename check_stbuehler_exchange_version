@@ -177,6 +177,8 @@ class Tree(yaml.YAMLObject):
 	@property
 	def short_code_wild(self) -> str:
 		if not self.path: return '*'
+		if self.version:
+			return self.version.short_code
 		return '.'.join(map(str, self.path)) + '.*'
 
 	@property
