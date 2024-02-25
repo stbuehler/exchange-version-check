@@ -313,6 +313,7 @@ class TreeBuilder(yaml.YAMLObject):
 	html_name: typing.Optional[str] = ''
 	version: typing.Optional[Version] = None
 	children: typing.Dict[int, 'TreeBuilder'] = dataclasses.field(default_factory=dict)
+	is_root: bool = False
 
 	def _subnode(self, key: int) -> 'TreeBuilder':
 		node = self.children.get(key, None)
@@ -321,56 +322,48 @@ class TreeBuilder(yaml.YAMLObject):
 			self.children[key] = node
 		return node
 
-	def _insert_name(self, path: typing.Sequence[int], name: str):
+	def _insert_root(self, path: typing.Sequence[int], name: str) -> TreeBuilder:
 		if len(path) == 0:
 			self.name = name
-			return
+			self.is_root = True
+			return self
 		key = path[0]
 		path = path[1:]
-		self._subnode(key)._insert_name(path, name)
+		return self._subnode(key)._insert_root(path, name)
 
-	def _insert(self, path: typing.Sequence[int], version: Version):
+	def _insert(self, path: typing.Sequence[int], version: Version, *, found_root: bool = False):
 		if len(path) == 0:
+			assert found_root, f'Version inserted above roots'
 			assert self.version is None, f'Version already in tree: {version} ({self.version})'
 			self.version = version
 			return
+		found_root = found_root or self.is_root
 		key = path[0]
 		path = path[1:]
-		self._subnode(key)._insert(path, version)
+		self._subnode(key)._insert(path, version, found_root=found_root)
 
-	def _gather_top_trees(self):
-		if self.name or self.version:
-			t = self._flatten_tree()
-			t._fix_tree()
-			yield t
-		else:
-			for key, node in sorted(self.children.items(), reverse=True):
-				for tt in node._gather_top_trees():
-					yield tt
+	def _build_root_trees(self) -> typing.Iterable[Tree]:
+		if self.is_root:
+			yield self._build_tree()
+		for key, node in sorted(self.children.items(), reverse=True):
+			yield from node._build_root_trees()
 
-	def _flatten_tree(self) -> Tree:
-		"""
-		Remove "insignificant" (no name, no version) nodes with less one children from the tree,
-		building a shortcut to the child node.
-		"""
-		children = [
-			node._flatten_tree()
-			for _key, node in sorted(self.children.items(), reverse=True)
-		]
-		if not self.name and not self.version and len(children) == 1:
-			# remove `self` from tree, skip directly to subtree
-			return children[0]
+	def _build_tree(self, parent: Tree | None = None) -> Tree:
+		children = []
 		tree = Tree(
 			path=self.path,
 			name=self.name,
 			html_name=self.html_name,
 			version=self.version,
 			children=children,
+			parent=parent,
 		)
 		if self.version:
 			self.version.tree = tree
-		for c in children:
-			c.parent = tree
+		for _key, node in sorted(self.children.items(), reverse=True):
+			children.append(node._build_tree(parent=tree))
+
+		tree._fix_tree()
 		return tree
 
 	@staticmethod
@@ -388,10 +381,10 @@ class TreeBuilder(yaml.YAMLObject):
 			((5, 0), 'Exchange Server 5.0'),
 			((4, 0), 'Exchange Server 4.0'),
 		):
-			root._insert_name(path, name)
+			root._insert_root(path, name)
 		for version in versions:
 			root._insert(version.num_code, version)
-		children = list(root._gather_top_trees())
+		children = list(root._build_root_trees())
 		root = Tree(path=(), name='', html_name=None, version=None, children=children)
 		for c in children:
 			c.parent = root
