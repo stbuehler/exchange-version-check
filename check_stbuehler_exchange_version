@@ -264,7 +264,7 @@ class Tree(yaml.YAMLObject):
 			dead_color_cls = ''
 		else:
 			dead_color_cls = ' class="text-danger"'
-		if self.alive and self.version:
+		if self.alive:
 			dead_collapse_cls = ''
 		else:
 			dead_collapse_cls = ' class="collapse show vt-collapse-dead"'
