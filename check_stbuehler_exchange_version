@@ -203,7 +203,7 @@ class Tree(yaml.YAMLObject):
 	def _is_flat_version(self):
 		return self.version and 0 == len(self.children)
 
-	def _calc_alive(self, parent_alive: bool=True, parent_latest_release: typing.Optional[datetime.date]=None) -> None:
+	def calc_alive_heuristic(self, parent_alive: bool=True, parent_latest_release: typing.Optional[datetime.date]=None) -> None:
 		alive = bool(
 			parent_alive and
 			self.latest_release and
@@ -219,7 +219,7 @@ class Tree(yaml.YAMLObject):
 				alive = False
 		self.alive = alive
 		for node in self.children:
-			node._calc_alive(alive, self.latest_release)
+			node.calc_alive_heuristic(alive, self.latest_release)
 
 	def _fix_tree(self) -> None:
 		guess_name = True
@@ -327,7 +327,6 @@ class TreeBuilder(yaml.YAMLObject):
 		if self.name or self.version:
 			t = self._flatten_tree()
 			t._fix_tree()
-			t._calc_alive()
 			yield t
 		else:
 			for key, node in sorted(self.children.items(), reverse=True):
@@ -395,6 +394,10 @@ class Trees:
 		for tree in self.trees:
 			tree.html_table(out)
 
+	def calc_alive_heuristic(self) -> None:
+		for tree in self.trees:
+			tree.calc_alive_heuristic()
+
 	@staticmethod
 	def load(args: argparse.Namespace) -> 'Trees':
 		ms_release_list = requests.get(args.source)
@@ -402,7 +405,9 @@ class Trees:
 		versions = list(Version.scan(ms_release_list.content.decode('utf-8')))
 
 		root = TreeBuilder.from_versions(versions)
-		return Trees(trees=root.children, versions={v.short_code: v for v in versions})
+		trees = Trees(trees=root.children, versions={v.short_code: v for v in versions})
+		trees.calc_alive_heuristic()
+		return trees
 
 
 def run_pages(args: argparse.Namespace):
