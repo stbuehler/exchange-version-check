@@ -24,6 +24,11 @@ import yaml
 urllib3.disable_warnings()
 
 
+DEFAULT_MS_RELEASES_SOURCE = 'https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates'
+DEFAULT_MS_SUPPORTED_CU_SOURCE = 'https://learn.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix'
+DEFAULT_ALIVE_SOURCE = 'https://stbuehler.github.io/exchange-version-check/alive.json'
+
+
 class HtmlRow:
 	def __init__(self, html: str) -> None:
 		self.html = html
@@ -573,7 +578,9 @@ def run_check(args: argparse.Namespace):
 			previos_to = to
 	else:
 		print(f"Acceptable versions: {', '.join(alive_versions)}")
-	print("Also see: https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates")
+	print("Also see:")
+	print(f"* {DEFAULT_MS_RELEASES_SOURCE}")
+	print(f"* {DEFAULT_MS_SUPPORTED_CU_SOURCE}")
 	sys.exit(rc)
 
 
@@ -588,10 +595,6 @@ def parser_add_help(parser: argparse.ArgumentParser):
 
 def main():
 	# MS killed https://github.com/MicrosoftDocs/OfficeDocs-Exchange, so now we have to parse html
-	DEFAULT_MS_RELEASES_SOURCE = 'https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates'
-	DEFAULT_MS_SUPPORTED_CU_SOURCE = 'https://learn.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix'
-	DEFAULT_ALIVE_SOURCE = 'https://stbuehler.github.io/exchange-version-check/alive.json'
-
 	parser = argparse.ArgumentParser('check_stbuehler_exchange_version', add_help=False)
 	parser_add_help(parser)
 
