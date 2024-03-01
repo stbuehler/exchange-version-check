@@ -567,15 +567,21 @@ def run_check(args: argparse.Namespace):
 		print(f"CRITICAL: Version {owa_version} is outdated ({version_name})|")
 		rc = 2
 	if version and version.tree:
-		print("Update targets:")
+		update_targets: list[str] = []
 		p = version.tree.parent
 		previos_to = None
 		while p:
 			to = p.latest()
 			if to != version and to != previos_to:
-				print(f"- {to.short_code} ({to.name})")
+				update_targets.append(f"- {to.short_code} ({to.name})")
 			p = p.parent
 			previos_to = to
+		if update_targets:
+			print("Update targets:")
+			for t in update_targets:
+				print(t)
+		else:
+			print("This is the latest release.")
 	else:
 		print(f"Acceptable versions: {', '.join(alive_versions)}")
 	print("Also see:")
