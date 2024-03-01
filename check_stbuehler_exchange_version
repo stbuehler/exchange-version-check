@@ -6,16 +6,22 @@
 
 from __future__ import annotations
 
+import argparse
 import dataclasses
 import datetime
 import json
 import os.path
 import re
-import typing
-import yaml
-import requests
-import argparse
 import sys
+import typing
+
+import requests
+import urllib3
+import yaml
+
+
+# if we disable TLS certificate verification explicitly we don't want f***ing warnings.
+urllib3.disable_warnings()
 
 
 class HtmlRow:
@@ -529,7 +535,7 @@ def run_check(args: argparse.Namespace):
 	proto = args.http and 'http' or 'https'
 	url = f'{proto}://{args.host}/AutoDiscover/AutoDiscover.xml'
 	try:
-		resp = requests.get(url, allow_redirects=True)
+		resp = requests.get(url, allow_redirects=True, verify=not args.no_verify)
 	except Exception as e:
 		print("UNKNOWN: Couldn't find exchange server version|")
 		print(e)
@@ -604,6 +610,7 @@ def main():
 	check.add_argument('--alive-source', default=DEFAULT_ALIVE_SOURCE)
 	check.add_argument('-h', '--host', required=True, help='Exchange host to check')
 	check.add_argument('--http', action='store_true', help='Use http request')
+	check.add_argument('--no-verify', action='store_true', help="Don't verify TLS certificate")
 
 	argv = sys.argv[1:]
 	if len(argv) > 0 and not argv[0] in ('--help', '-?', 'check', 'pages'):
