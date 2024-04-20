@@ -1,13 +1,15 @@
 - name: Exchange Server 2019
   children:
-  - name: Exchange Server 2019 CU14
+  - name: Exchange Server 2019 CU14 (2024H1)
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=9fbd842e-828a-408a-b562-5632a8a827ab"
+      data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
     children:
     - version:
-        name: Exchange Server 2019 CU14 Mar24SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU14 Mar24SU'
         short_code: 15.2.1544.9
         date: 2024-03-12
-        html_name: <a href="https://support.microsoft.com/help/5036401" data-linktype="external">Exchange
-          Server 2019 CU14 Mar24SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5036401"
+          data-linktype="external">Exchange Server 2019 CU14 Mar24SU</a>'
       latest_release: 2024-03-12
       alive: true
     - version:
@@ -19,50 +21,52 @@
       latest_release: 2024-02-13
     latest_release: 2024-03-12
     alive: true
-  - name: Exchange Server 2019 CU13
+  - name: Exchange Server 2019 CU13 (2023H1)
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=f4406d99-fc26-451f-85c1-eaaa8b250fd6"
+      data-linktype="external">Exchange Server 2019 CU13 (2023H1)</a>
     children:
     - version:
-        name: Exchange Server 2019 CU13 Mar24SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Mar24SU'
         short_code: 15.2.1258.32
         date: 2024-03-12
-        html_name: <a href="https://support.microsoft.com/help/5036402" data-linktype="external">Exchange
-          Server 2019 CU13 Mar24SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5036402"
+          data-linktype="external">Exchange Server 2019 CU13 Mar24SU</a>'
       latest_release: 2024-03-12
       alive: true
     - version:
-        name: Exchange Server 2019 CU13 Nov23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Nov23SU'
         short_code: 15.2.1258.28
         date: 2023-11-14
-        html_name: <a href="https://support.microsoft.com/help/5032146" data-linktype="external">Exchange
-          Server 2019 CU13 Nov23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5032146"
+          data-linktype="external">Exchange Server 2019 CU13 Nov23SU</a>'
       latest_release: 2023-11-14
     - version:
-        name: Exchange Server 2019 CU13 Oct23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Oct23SU'
         short_code: 15.2.1258.27
         date: 2023-10-10
-        html_name: <a href="https://support.microsoft.com/help/5030877" data-linktype="external">Exchange
-          Server 2019 CU13 Oct23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030877"
+          data-linktype="external">Exchange Server 2019 CU13 Oct23SU</a>'
       latest_release: 2023-10-10
     - version:
-        name: Exchange Server 2019 CU13 Aug23SUv2
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Aug23SUv2'
         short_code: 15.2.1258.25
         date: 2023-08-15
-        html_name: <a href="https://support.microsoft.com/help/5030524" data-linktype="external">Exchange
-          Server 2019 CU13 Aug23SUv2</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030524"
+          data-linktype="external">Exchange Server 2019 CU13 Aug23SUv2</a>'
       latest_release: 2023-08-15
     - version:
-        name: Exchange Server 2019 CU13 Aug23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Aug23SU'
         short_code: 15.2.1258.23
         date: 2023-08-08
-        html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
-          Server 2019 CU13 Aug23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5029388"
+          data-linktype="external">Exchange Server 2019 CU13 Aug23SU</a>'
       latest_release: 2023-08-08
     - version:
-        name: Exchange Server 2019 CU13 Jun23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU13 Jun23SU'
         short_code: 15.2.1258.16
         date: 2023-06-13
-        html_name: <a href="https://support.microsoft.com/help/5026261" data-linktype="external">Exchange
-          Server 2019 CU13 Jun23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5026261"
+          data-linktype="external">Exchange Server 2019 CU13 Jun23SU</a>'
       latest_release: 2023-06-13
     - version:
         name: Exchange Server 2019 CU13 (2023H1)
@@ -73,91 +77,93 @@
       latest_release: 2023-05-03
     latest_release: 2024-03-12
     alive: true
-  - name: Exchange Server 2019 CU12
+  - name: Exchange Server 2019 CU12 (2022H1)
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a149e06c-62f4-4b62-adf8-7d382223a239"
+      data-linktype="external">Exchange Server 2019 CU12 (2022H1)</a>
     children:
     - version:
-        name: Exchange Server 2019 CU12 Nov23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Nov23SU'
         short_code: 15.2.1118.40
         date: 2023-11-14
-        html_name: <a href="https://support.microsoft.com/help/5032146" data-linktype="external">Exchange
-          Server 2019 CU12 Nov23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5032146"
+          data-linktype="external">Exchange Server 2019 CU12 Nov23SU</a>'
       latest_release: 2023-11-14
     - version:
-        name: Exchange Server 2019 CU12 Oct23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Oct23SU'
         short_code: 15.2.1118.39
         date: 2023-10-10
-        html_name: <a href="https://support.microsoft.com/help/5030877" data-linktype="external">Exchange
-          Server 2019 CU12 Oct23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030877"
+          data-linktype="external">Exchange Server 2019 CU12 Oct23SU</a>'
       latest_release: 2023-10-10
     - version:
-        name: Exchange Server 2019 CU12 Aug23SUv2
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Aug23SUv2'
         short_code: 15.2.1118.37
         date: 2023-08-15
-        html_name: <a href="https://support.microsoft.com/help/5030524" data-linktype="external">Exchange
-          Server 2019 CU12 Aug23SUv2</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030524"
+          data-linktype="external">Exchange Server 2019 CU12 Aug23SUv2</a>'
       latest_release: 2023-08-15
     - version:
-        name: Exchange Server 2019 CU12 Aug23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Aug23SU'
         short_code: 15.2.1118.36
         date: 2023-08-08
-        html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
-          Server 2019 CU12 Aug23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5029388"
+          data-linktype="external">Exchange Server 2019 CU12 Aug23SU</a>'
       latest_release: 2023-08-08
     - version:
-        name: Exchange Server 2019 CU12 Jun23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Jun23SU'
         short_code: 15.2.1118.30
         date: 2023-06-13
-        html_name: <a href="https://support.microsoft.com/help/5026261" data-linktype="external">Exchange
-          Server 2019 CU12 Jun23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5026261"
+          data-linktype="external">Exchange Server 2019 CU12 Jun23SU</a>'
       latest_release: 2023-06-13
     - version:
-        name: Exchange Server 2019 CU12 Mar23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Mar23SU'
         short_code: 15.2.1118.26
         date: 2023-03-14
-        html_name: <a href="https://support.microsoft.com/help/5024296" data-linktype="external">Exchange
-          Server 2019 CU12 Mar23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5024296"
+          data-linktype="external">Exchange Server 2019 CU12 Mar23SU</a>'
       latest_release: 2023-03-14
     - version:
-        name: Exchange Server 2019 CU12 Feb23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Feb23SU'
         short_code: 15.2.1118.25
         date: 2023-02-14
-        html_name: <a href="https://support.microsoft.com/help/5023038" data-linktype="external">Exchange
-          Server 2019 CU12 Feb23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5023038"
+          data-linktype="external">Exchange Server 2019 CU12 Feb23SU</a>'
       latest_release: 2023-02-14
     - version:
-        name: Exchange Server 2019 CU12 Jan23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Jan23SU'
         short_code: 15.2.1118.21
         date: 2023-01-10
-        html_name: <a href="https://support.microsoft.com/help/5022193" data-linktype="external">Exchange
-          Server 2019 CU12 Jan23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5022193"
+          data-linktype="external">Exchange Server 2019 CU12 Jan23SU</a>'
       latest_release: 2023-01-10
     - version:
-        name: Exchange Server 2019 CU12 Nov22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Nov22SU'
         short_code: 15.2.1118.20
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
-          Server 2019 CU12 Nov22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019758"
+          data-linktype="external">Exchange Server 2019 CU12 Nov22SU</a>'
       latest_release: 2022-11-08
     - version:
-        name: Exchange Server 2019 CU12 Oct22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Oct22SU'
         short_code: 15.2.1118.15
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019077" data-linktype="external">Exchange
-          Server 2019 CU12 Oct22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019077"
+          data-linktype="external">Exchange Server 2019 CU12 Oct22SU</a>'
       latest_release: 2022-10-11
     - version:
-        name: Exchange Server 2019 CU12 Aug22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 Aug22SU'
         short_code: 15.2.1118.12
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015322" data-linktype="external">Exchange
-          Server 2019 CU12 Aug22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5015322"
+          data-linktype="external">Exchange Server 2019 CU12 Aug22SU</a>'
       latest_release: 2022-08-09
     - version:
-        name: Exchange Server 2019 CU12 May22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU12 May22SU'
         short_code: 15.2.1118.9
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014261" data-linktype="external">Exchange
-          Server 2019 CU12 May22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5014261"
+          data-linktype="external">Exchange Server 2019 CU12 May22SU</a>'
       latest_release: 2022-05-10
     - version:
         name: Exchange Server 2019 CU12 (2022H1)
@@ -168,83 +174,85 @@
       latest_release: 2022-04-20
     latest_release: 2023-11-14
   - name: Exchange Server 2019 CU11
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=40be4769-0188-4b1a-a023-1a3ecb919870"
+      data-linktype="external">Exchange Server 2019 CU11</a>
     children:
     - version:
-        name: Exchange Server 2019 CU11 Mar23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Mar23SU'
         short_code: 15.2.986.42
         date: 2023-03-14
-        html_name: <a href="https://support.microsoft.com/help/5024296" data-linktype="external">Exchange
-          Server 2019 CU11 Mar23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5024296"
+          data-linktype="external">Exchange Server 2019 CU11 Mar23SU</a>'
       latest_release: 2023-03-14
     - version:
-        name: Exchange Server 2019 CU11 Feb23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Feb23SU'
         short_code: 15.2.986.41
         date: 2023-02-14
-        html_name: <a href="https://support.microsoft.com/help/5023038" data-linktype="external">Exchange
-          Server 2019 CU11 Feb23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5023038"
+          data-linktype="external">Exchange Server 2019 CU11 Feb23SU</a>'
       latest_release: 2023-02-14
     - version:
-        name: Exchange Server 2019 CU11 Jan23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Jan23SU'
         short_code: 15.2.986.37
         date: 2023-01-10
-        html_name: <a href="https://support.microsoft.com/help/5022193" data-linktype="external">Exchange
-          Server 2019 CU11 Jan23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5022193"
+          data-linktype="external">Exchange Server 2019 CU11 Jan23SU</a>'
       latest_release: 2023-01-10
     - version:
-        name: Exchange Server 2019 CU11 Nov22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Nov22SU'
         short_code: 15.2.986.36
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
-          Server 2019 CU11 Nov22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019758"
+          data-linktype="external">Exchange Server 2019 CU11 Nov22SU</a>'
       latest_release: 2022-11-08
     - version:
-        name: Exchange Server 2019 CU11 Oct22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Oct22SU'
         short_code: 15.2.986.30
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019077" data-linktype="external">Exchange
-          Server 2019 CU11 Oct22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019077"
+          data-linktype="external">Exchange Server 2019 CU11 Oct22SU</a>'
       latest_release: 2022-10-11
     - version:
-        name: Exchange Server 2019 CU11 Aug22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Aug22SU'
         short_code: 15.2.986.29
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015322" data-linktype="external">Exchange
-          Server 2019 CU11 Aug22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5015322"
+          data-linktype="external">Exchange Server 2019 CU11 Aug22SU</a>'
       latest_release: 2022-08-09
     - version:
-        name: Exchange Server 2019 CU11 May22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 May22SU'
         short_code: 15.2.986.26
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014261" data-linktype="external">Exchange
-          Server 2019 CU11 May22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5014261"
+          data-linktype="external">Exchange Server 2019 CU11 May22SU</a>'
       latest_release: 2022-05-10
     - version:
-        name: Exchange Server 2019 CU11 Mar22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Mar22SU'
         short_code: 15.2.986.22
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5012698" data-linktype="external">Exchange
-          Server 2019 CU11 Mar22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5012698"
+          data-linktype="external">Exchange Server 2019 CU11 Mar22SU</a>'
       latest_release: 2022-03-08
     - version:
-        name: Exchange Server 2019 CU11 Jan22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Jan22SU'
         short_code: 15.2.986.15
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631" data-linktype="external">Exchange
-          Server 2019 CU11 Jan22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5008631"
+          data-linktype="external">Exchange Server 2019 CU11 Jan22SU</a>'
       latest_release: 2022-01-11
     - version:
-        name: Exchange Server 2019 CU11 Nov21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Nov21SU'
         short_code: 15.2.986.14
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409" data-linktype="external">Exchange
-          Server 2019 CU11 Nov21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007409"
+          data-linktype="external">Exchange Server 2019 CU11 Nov21SU</a>'
       latest_release: 2021-11-09
     - version:
-        name: Exchange Server 2019 CU11 Oct21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU11 Oct21SU'
         short_code: 15.2.986.9
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007012" data-linktype="external">Exchange
-          Server 2019 CU11 Oct21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007012"
+          data-linktype="external">Exchange Server 2019 CU11 Oct21SU</a>'
       latest_release: 2021-10-12
     - version:
         name: Exchange Server 2019 CU11
@@ -257,39 +265,39 @@
   - name: Exchange Server 2019 CU10
     children:
     - version:
-        name: Exchange Server 2019 CU10 Mar22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU10 Mar22SU'
         short_code: 15.2.922.27
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5012698" data-linktype="external">Exchange
-          Server 2019 CU10 Mar22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5012698"
+          data-linktype="external">Exchange Server 2019 CU10 Mar22SU</a>'
       latest_release: 2022-03-08
     - version:
-        name: Exchange Server 2019 CU10 Jan22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU10 Jan22SU'
         short_code: 15.2.922.20
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631" data-linktype="external">Exchange
-          Server 2019 CU10 Jan22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5008631"
+          data-linktype="external">Exchange Server 2019 CU10 Jan22SU</a>'
       latest_release: 2022-01-11
     - version:
-        name: Exchange Server 2019 CU10 Nov21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU10 Nov21SU'
         short_code: 15.2.922.19
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409" data-linktype="external">Exchange
-          Server 2019 CU10 Nov21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007409"
+          data-linktype="external">Exchange Server 2019 CU10 Nov21SU</a>'
       latest_release: 2021-11-09
     - version:
-        name: Exchange Server 2019 CU10 Oct21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU10 Oct21SU'
         short_code: 15.2.922.14
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007012" data-linktype="external">Exchange
-          Server 2019 CU10 Oct21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007012"
+          data-linktype="external">Exchange Server 2019 CU10 Oct21SU</a>'
       latest_release: 2021-10-12
     - version:
-        name: Exchange Server 2019 CU10 Jul21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU10 Jul21SU'
         short_code: 15.2.922.13
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004780" data-linktype="external">Exchange
-          Server 2019 CU10 Jul21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5004780"
+          data-linktype="external">Exchange Server 2019 CU10 Jul21SU</a>'
       latest_release: 2021-07-13
     - version:
         name: Exchange Server 2019 CU10
@@ -300,25 +308,25 @@
   - name: Exchange Server 2019 CU9
     children:
     - version:
-        name: Exchange Server 2019 CU9 Jul21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU9 Jul21SU'
         short_code: 15.2.858.15
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004780" data-linktype="external">Exchange
-          Server 2019 CU9 Jul21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5004780"
+          data-linktype="external">Exchange Server 2019 CU9 Jul21SU</a>'
       latest_release: 2021-07-13
     - version:
-        name: Exchange Server 2019 CU9 May21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU9 May21SU'
         short_code: 15.2.858.12
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435" data-linktype="external">Exchange
-          Server 2019 CU9 May21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5003435"
+          data-linktype="external">Exchange Server 2019 CU9 May21SU</a>'
       latest_release: 2021-05-11
     - version:
-        name: Exchange Server 2019 CU9 Apr21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU9 Apr21SU'
         short_code: 15.2.858.10
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779" data-linktype="external">Exchange
-          Server 2019 CU9 Apr21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5001779"
+          data-linktype="external">Exchange Server 2019 CU9 Apr21SU</a>'
       latest_release: 2021-04-13
     - version:
         name: Exchange Server 2019 CU9
@@ -329,25 +337,25 @@
   - name: Exchange Server 2019 CU8
     children:
     - version:
-        name: Exchange Server 2019 CU8 May21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU8 May21SU'
         short_code: 15.2.792.15
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435" data-linktype="external">Exchange
-          Server 2019 CU8 May21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5003435"
+          data-linktype="external">Exchange Server 2019 CU8 May21SU</a>'
       latest_release: 2021-05-11
     - version:
-        name: Exchange Server 2019 CU8 Apr21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU8 Apr21SU'
         short_code: 15.2.792.13
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779" data-linktype="external">Exchange
-          Server 2019 CU8 Apr21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5001779"
+          data-linktype="external">Exchange Server 2019 CU8 Apr21SU</a>'
       latest_release: 2021-04-13
     - version:
-        name: Exchange Server 2019 CU8 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU8 Mar21SU'
         short_code: 15.2.792.10
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU8 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU8 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU8
@@ -358,11 +366,11 @@
   - name: Exchange Server 2019 CU7
     children:
     - version:
-        name: Exchange Server 2019 CU7 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU7 Mar21SU'
         short_code: 15.2.721.13
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU7 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU7 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU7
@@ -373,11 +381,11 @@
   - name: Exchange Server 2019 CU6
     children:
     - version:
-        name: Exchange Server 2019 CU6 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU6 Mar21SU'
         short_code: 15.2.659.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU6 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU6 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU6
@@ -388,11 +396,11 @@
   - name: Exchange Server 2019 CU5
     children:
     - version:
-        name: Exchange Server 2019 CU5 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU5 Mar21SU'
         short_code: 15.2.595.8
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU5 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU5 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU5
@@ -403,11 +411,11 @@
   - name: Exchange Server 2019 CU4
     children:
     - version:
-        name: Exchange Server 2019 CU4 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU4 Mar21SU'
         short_code: 15.2.529.13
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU4 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU4 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU4
@@ -418,11 +426,11 @@
   - name: Exchange Server 2019 CU3
     children:
     - version:
-        name: Exchange Server 2019 CU3 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU3 Mar21SU'
         short_code: 15.2.464.15
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU3 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU3 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU3
@@ -433,11 +441,11 @@
   - name: Exchange Server 2019 CU2
     children:
     - version:
-        name: Exchange Server 2019 CU2 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU2 Mar21SU'
         short_code: 15.2.397.11
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU2 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU2 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU2
@@ -448,11 +456,11 @@
   - name: Exchange Server 2019 CU1
     children:
     - version:
-        name: Exchange Server 2019 CU1 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU1 Mar21SU'
         short_code: 15.2.330.11
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 CU1 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 CU1 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 CU1
@@ -463,11 +471,11 @@
   - name: Exchange Server 2019 RTM
     children:
     - version:
-        name: Exchange Server 2019 RTM Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 RTM Mar21SU'
         short_code: 15.2.221.18
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2019 RTM Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2019 RTM Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2019 RTM
@@ -487,99 +495,101 @@
   alive: true
 - name: Exchange Server 2016
   children:
-  - name: Exchange Server 2016 CU23
+  - name: Exchange Server 2016 CU23 (2022H1)
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=ad395419-4d2f-4eb0-97fb-a5b88ab814e1"
+      data-linktype="external">Exchange Server 2016 CU23 (2022H1)</a>
     children:
     - version:
-        name: Exchange Server 2016 CU23 Mar24SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Mar24SU'
         short_code: 15.1.2507.37
         date: 2024-03-12
-        html_name: <a href="https://support.microsoft.com/help/5036386" data-linktype="external">Exchange
-          Server 2016 CU23 Mar24SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5036386"
+          data-linktype="external">Exchange Server 2016 CU23 Mar24SU</a>'
       latest_release: 2024-03-12
       alive: true
     - version:
-        name: Exchange Server 2016 CU23 Nov23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Nov23SU'
         short_code: 15.1.2507.35
         date: 2023-11-14
-        html_name: <a href="https://support.microsoft.com/help/5032147" data-linktype="external">Exchange
-          Server 2016 CU23 Nov23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5032147"
+          data-linktype="external">Exchange Server 2016 CU23 Nov23SU</a>'
       latest_release: 2023-11-14
     - version:
-        name: Exchange Server 2016 CU23 Oct23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Oct23SU'
         short_code: 15.1.2507.34
         date: 2023-10-10
-        html_name: <a href="https://support.microsoft.com/help/5030877" data-linktype="external">Exchange
-          Server 2016 CU23 Oct23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030877"
+          data-linktype="external">Exchange Server 2016 CU23 Oct23SU</a>'
       latest_release: 2023-10-10
     - version:
-        name: Exchange Server 2016 CU23 Aug23SUv2
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Aug23SUv2'
         short_code: 15.1.2507.32
         date: 2023-08-15
-        html_name: <a href="https://support.microsoft.com/help/5030524" data-linktype="external">Exchange
-          Server 2016 CU23 Aug23SUv2</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5030524"
+          data-linktype="external">Exchange Server 2016 CU23 Aug23SUv2</a>'
       latest_release: 2023-08-15
     - version:
-        name: Exchange Server 2016 CU23 Aug23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Aug23SU'
         short_code: 15.1.2507.31
         date: 2023-08-08
-        html_name: <a href="https://support.microsoft.com/help/5029388" data-linktype="external">Exchange
-          Server 2016 CU23 Aug23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5029388"
+          data-linktype="external">Exchange Server 2016 CU23 Aug23SU</a>'
       latest_release: 2023-08-08
     - version:
-        name: Exchange Server 2016 CU23 Jun23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Jun23SU'
         short_code: 15.1.2507.27
         date: 2023-06-13
-        html_name: <a href="https://support.microsoft.com/help/5025903" data-linktype="external">Exchange
-          Server 2016 CU23 Jun23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5025903"
+          data-linktype="external">Exchange Server 2016 CU23 Jun23SU</a>'
       latest_release: 2023-06-13
     - version:
-        name: Exchange Server 2016 CU23 Mar23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Mar23SU'
         short_code: 15.1.2507.23
         date: 2023-03-14
-        html_name: <a href="https://support.microsoft.com/help/5024296" data-linktype="external">Exchange
-          Server 2016 CU23 Mar23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5024296"
+          data-linktype="external">Exchange Server 2016 CU23 Mar23SU</a>'
       latest_release: 2023-03-14
     - version:
-        name: Exchange Server 2016 CU23 Feb23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Feb23SU'
         short_code: 15.1.2507.21
         date: 2023-02-14
-        html_name: <a href="https://support.microsoft.com/help/5023038" data-linktype="external">Exchange
-          Server 2016 CU23 Feb23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5023038"
+          data-linktype="external">Exchange Server 2016 CU23 Feb23SU</a>'
       latest_release: 2023-02-14
     - version:
-        name: Exchange Server 2016 CU23 Jan23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Jan23SU'
         short_code: 15.1.2507.17
         date: 2023-01-10
-        html_name: <a href="https://support.microsoft.com/help/5022143" data-linktype="external">Exchange
-          Server 2016 CU23 Jan23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5022143"
+          data-linktype="external">Exchange Server 2016 CU23 Jan23SU</a>'
       latest_release: 2023-01-10
     - version:
-        name: Exchange Server 2016 CU23 Nov22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Nov22SU'
         short_code: 15.1.2507.16
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
-          Server 2016 CU23 Nov22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019758"
+          data-linktype="external">Exchange Server 2016 CU23 Nov22SU</a>'
       latest_release: 2022-11-08
     - version:
-        name: Exchange Server 2016 CU23 Oct22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Oct22SU'
         short_code: 15.1.2507.13
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019077" data-linktype="external">Exchange
-          Server 2016 CU23 Oct22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019077"
+          data-linktype="external">Exchange Server 2016 CU23 Oct22SU</a>'
       latest_release: 2022-10-11
     - version:
-        name: Exchange Server 2016 CU23 Aug22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Aug22SU'
         short_code: 15.1.2507.12
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015322" data-linktype="external">Exchange
-          Server 2016 CU23 Aug22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5015322"
+          data-linktype="external">Exchange Server 2016 CU23 Aug22SU</a>'
       latest_release: 2022-08-09
     - version:
-        name: Exchange Server 2016 CU23 May22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 May22SU'
         short_code: 15.1.2507.9
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014261" data-linktype="external">Exchange
-          Server 2016 CU23 May22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5014261"
+          data-linktype="external">Exchange Server 2016 CU23 May22SU</a>'
       latest_release: 2022-05-10
     - version:
         name: Exchange Server 2016 CU23 (2022H1)
@@ -591,62 +601,64 @@
     latest_release: 2024-03-12
     alive: true
   - name: Exchange Server 2016 CU22
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?familyID=a7d608a2-d81b-46af-8753-8c3c2ea1f783"
+      data-linktype="external">Exchange Server 2016 CU22</a>
     children:
     - version:
-        name: Exchange Server 2016 CU22 Nov22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Nov22SU'
         short_code: 15.1.2375.37
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
-          Server 2016 CU22 Nov22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019758"
+          data-linktype="external">Exchange Server 2016 CU22 Nov22SU</a>'
       latest_release: 2022-11-08
     - version:
-        name: Exchange Server 2016 CU22 Oct22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Oct22SU'
         short_code: 15.1.2375.32
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019077" data-linktype="external">Exchange
-          Server 2016 CU22 Oct22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019077"
+          data-linktype="external">Exchange Server 2016 CU22 Oct22SU</a>'
       latest_release: 2022-10-11
     - version:
-        name: Exchange Server 2016 CU22 Aug22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Aug22SU'
         short_code: 15.1.2375.31
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015322" data-linktype="external">Exchange
-          Server 2016 CU22 Aug22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5015322"
+          data-linktype="external">Exchange Server 2016 CU22 Aug22SU</a>'
       latest_release: 2022-08-09
     - version:
-        name: Exchange Server 2016 CU22 May22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 May22SU'
         short_code: 15.1.2375.28
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014261" data-linktype="external">Exchange
-          Server 2016 CU22 May22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5014261"
+          data-linktype="external">Exchange Server 2016 CU22 May22SU</a>'
       latest_release: 2022-05-10
     - version:
-        name: Exchange Server 2016 CU22 Mar22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Mar22SU'
         short_code: 15.1.2375.24
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5012698" data-linktype="external">Exchange
-          Server 2016 CU22 Mar22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5012698"
+          data-linktype="external">Exchange Server 2016 CU22 Mar22SU</a>'
       latest_release: 2022-03-08
     - version:
-        name: Exchange Server 2016 CU22 Jan22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Jan22SU'
         short_code: 15.1.2375.18
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631" data-linktype="external">Exchange
-          Server 2016 CU22 Jan22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5008631"
+          data-linktype="external">Exchange Server 2016 CU22 Jan22SU</a>'
       latest_release: 2022-01-11
     - version:
-        name: Exchange Server 2016 CU22 Nov21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Nov21SU'
         short_code: 15.1.2375.17
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409" data-linktype="external">Exchange
-          Server 2016 CU22 Nov21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007409"
+          data-linktype="external">Exchange Server 2016 CU22 Nov21SU</a>'
       latest_release: 2021-11-09
     - version:
-        name: Exchange Server 2016 CU22 Oct21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU22 Oct21SU'
         short_code: 15.1.2375.12
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007012" data-linktype="external">Exchange
-          Server 2016 CU22 Oct21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007012"
+          data-linktype="external">Exchange Server 2016 CU22 Oct21SU</a>'
       latest_release: 2021-10-12
     - version:
         name: Exchange Server 2016 CU22
@@ -659,39 +671,39 @@
   - name: Exchange Server 2016 CU21
     children:
     - version:
-        name: Exchange Server 2016 CU21 Mar22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU21 Mar22SU'
         short_code: 15.1.2308.27
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5012698" data-linktype="external">Exchange
-          Server 2016 CU21 Mar22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5012698"
+          data-linktype="external">Exchange Server 2016 CU21 Mar22SU</a>'
       latest_release: 2022-03-08
     - version:
-        name: Exchange Server 2016 CU21 Jan22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU21 Jan22SU'
         short_code: 15.1.2308.21
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631" data-linktype="external">Exchange
-          Server 2016 CU21 Jan22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5008631"
+          data-linktype="external">Exchange Server 2016 CU21 Jan22SU</a>'
       latest_release: 2022-01-11
     - version:
-        name: Exchange Server 2016 CU21 Nov21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU21 Nov21SU'
         short_code: 15.1.2308.20
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409" data-linktype="external">Exchange
-          Server 2016 CU21 Nov21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007409"
+          data-linktype="external">Exchange Server 2016 CU21 Nov21SU</a>'
       latest_release: 2021-11-09
     - version:
-        name: Exchange Server 2016 CU21 Oct21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU21 Oct21SU'
         short_code: 15.1.2308.15
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007012" data-linktype="external">Exchange
-          Server 2016 CU21 Oct21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007012"
+          data-linktype="external">Exchange Server 2016 CU21 Oct21SU</a>'
       latest_release: 2021-10-12
     - version:
-        name: Exchange Server 2016 CU21 Jul21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU21 Jul21SU'
         short_code: 15.1.2308.14
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004779" data-linktype="external">Exchange
-          Server 2016 CU21 Jul21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5004779"
+          data-linktype="external">Exchange Server 2016 CU21 Jul21SU</a>'
       latest_release: 2021-07-13
     - version:
         name: Exchange Server 2016 CU21
@@ -702,25 +714,25 @@
   - name: Exchange Server 2016 CU20
     children:
     - version:
-        name: Exchange Server 2016 CU20 Jul21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU20 Jul21SU'
         short_code: 15.1.2242.12
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004779" data-linktype="external">Exchange
-          Server 2016 CU20 Jul21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5004779"
+          data-linktype="external">Exchange Server 2016 CU20 Jul21SU</a>'
       latest_release: 2021-07-13
     - version:
-        name: Exchange Server 2016 CU20 May21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU20 May21SU'
         short_code: 15.1.2242.10
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435" data-linktype="external">Exchange
-          Server 2016 CU20 May21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5003435"
+          data-linktype="external">Exchange Server 2016 CU20 May21SU</a>'
       latest_release: 2021-05-11
     - version:
-        name: Exchange Server 2016 CU20 Apr21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU20 Apr21SU'
         short_code: 15.1.2242.8
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779" data-linktype="external">Exchange
-          Server 2016 CU20 Apr21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5001779"
+          data-linktype="external">Exchange Server 2016 CU20 Apr21SU</a>'
       latest_release: 2021-04-13
     - version:
         name: Exchange Server 2016 CU20
@@ -731,25 +743,25 @@
   - name: Exchange Server 2016 CU19
     children:
     - version:
-        name: Exchange Server 2016 CU19 May21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU19 May21SU'
         short_code: 15.1.2176.14
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435" data-linktype="external">Exchange
-          Server 2016 CU19 May21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5003435"
+          data-linktype="external">Exchange Server 2016 CU19 May21SU</a>'
       latest_release: 2021-05-11
     - version:
-        name: Exchange Server 2016 CU19 Apr21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU19 Apr21SU'
         short_code: 15.1.2176.12
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779" data-linktype="external">Exchange
-          Server 2016 CU19 Apr21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5001779"
+          data-linktype="external">Exchange Server 2016 CU19 Apr21SU</a>'
       latest_release: 2021-04-13
     - version:
-        name: Exchange Server 2016 CU19 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU19 Mar21SU'
         short_code: 15.1.2176.9
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU19 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU19 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU19
@@ -760,11 +772,11 @@
   - name: Exchange Server 2016 CU18
     children:
     - version:
-        name: Exchange Server 2016 CU18 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU18 Mar21SU'
         short_code: 15.1.2106.13
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU18 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU18 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU18
@@ -775,11 +787,11 @@
   - name: Exchange Server 2016 CU17
     children:
     - version:
-        name: Exchange Server 2016 CU17 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU17 Mar21SU'
         short_code: 15.1.2044.13
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU17 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU17 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU17
@@ -790,11 +802,11 @@
   - name: Exchange Server 2016 CU16
     children:
     - version:
-        name: Exchange Server 2016 CU16 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU16 Mar21SU'
         short_code: 15.1.1979.8
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU16 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU16 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU16
@@ -805,11 +817,11 @@
   - name: Exchange Server 2016 CU15
     children:
     - version:
-        name: Exchange Server 2016 CU15 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU15 Mar21SU'
         short_code: 15.1.1913.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU15 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU15 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU15
@@ -820,11 +832,11 @@
   - name: Exchange Server 2016 CU14
     children:
     - version:
-        name: Exchange Server 2016 CU14 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU14 Mar21SU'
         short_code: 15.1.1847.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU14 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU14 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU14
@@ -835,11 +847,11 @@
   - name: Exchange Server 2016 CU13
     children:
     - version:
-        name: Exchange Server 2016 CU13 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU13 Mar21SU'
         short_code: 15.1.1779.8
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU13 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU13 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU13
@@ -850,11 +862,11 @@
   - name: Exchange Server 2016 CU12
     children:
     - version:
-        name: Exchange Server 2016 CU12 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU12 Mar21SU'
         short_code: 15.1.1713.10
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU12 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU12 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU12
@@ -865,11 +877,11 @@
   - name: Exchange Server 2016 CU11
     children:
     - version:
-        name: Exchange Server 2016 CU11 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU11 Mar21SU'
         short_code: 15.1.1591.18
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU11 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU11 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU11
@@ -880,11 +892,11 @@
   - name: Exchange Server 2016 CU10
     children:
     - version:
-        name: Exchange Server 2016 CU10 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU10 Mar21SU'
         short_code: 15.1.1531.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU10 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU10 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU10
@@ -895,11 +907,11 @@
   - name: Exchange Server 2016 CU9
     children:
     - version:
-        name: Exchange Server 2016 CU9 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU9 Mar21SU'
         short_code: 15.1.1466.16
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU9 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU9 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU9
@@ -910,11 +922,11 @@
   - name: Exchange Server 2016 CU8
     children:
     - version:
-        name: Exchange Server 2016 CU8 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU8 Mar21SU'
         short_code: 15.1.1415.10
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2016 CU8 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2016 CU8 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2016 CU8
@@ -996,111 +1008,113 @@
 - name: Exchange Server 2013
   children:
   - name: Exchange Server 2013 CU23
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58392"
+      data-linktype="external">Exchange Server 2013 CU23</a>
     children:
     - version:
-        name: Exchange Server 2013 CU23 Mar23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Mar23SU'
         short_code: 15.0.1497.48
         date: 2023-03-14
-        html_name: <a href="https://support.microsoft.com/help/5024296" data-linktype="external">Exchange
-          Server 2013 CU23 Mar23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5024296"
+          data-linktype="external">Exchange Server 2013 CU23 Mar23SU</a>'
       latest_release: 2023-03-14
     - version:
-        name: Exchange Server 2013 CU23 Feb23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Feb23SU'
         short_code: 15.0.1497.47
         date: 2023-02-14
-        html_name: <a href="https://support.microsoft.com/help/5023038" data-linktype="external">Exchange
-          Server 2013 CU23 Feb23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5023038"
+          data-linktype="external">Exchange Server 2013 CU23 Feb23SU</a>'
       latest_release: 2023-02-14
     - version:
-        name: Exchange Server 2013 CU23 Jan23SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Jan23SU'
         short_code: 15.0.1497.45
         date: 2023-01-10
-        html_name: <a href="https://support.microsoft.com/help/5022188" data-linktype="external">Exchange
-          Server 2013 CU23 Jan23SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5022188"
+          data-linktype="external">Exchange Server 2013 CU23 Jan23SU</a>'
       latest_release: 2023-01-10
     - version:
-        name: Exchange Server 2013 CU23 Nov22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Nov22SU'
         short_code: 15.0.1497.44
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758" data-linktype="external">Exchange
-          Server 2013 CU23 Nov22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019758"
+          data-linktype="external">Exchange Server 2013 CU23 Nov22SU</a>'
       latest_release: 2022-11-08
     - version:
-        name: Exchange Server 2013 CU23 Oct22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Oct22SU'
         short_code: 15.0.1497.42
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019076" data-linktype="external">Exchange
-          Server 2013 CU23 Oct22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5019076"
+          data-linktype="external">Exchange Server 2013 CU23 Oct22SU</a>'
       latest_release: 2022-10-11
     - version:
-        name: Exchange Server 2013 CU23 Aug22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Aug22SU'
         short_code: 15.0.1497.40
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015321" data-linktype="external">Exchange
-          Server 2013 CU23 Aug22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5015321"
+          data-linktype="external">Exchange Server 2013 CU23 Aug22SU</a>'
       latest_release: 2022-08-09
     - version:
-        name: Exchange Server 2013 CU23 May22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 May22SU'
         short_code: 15.0.1497.36
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014260" data-linktype="external">Exchange
-          Server 2013 CU23 May22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5014260"
+          data-linktype="external">Exchange Server 2013 CU23 May22SU</a>'
       latest_release: 2022-05-10
     - version:
-        name: Exchange Server 2013 CU23 Mar22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Mar22SU'
         short_code: 15.0.1497.33
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5010324" data-linktype="external">Exchange
-          Server 2013 CU23 Mar22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5010324"
+          data-linktype="external">Exchange Server 2013 CU23 Mar22SU</a>'
       latest_release: 2022-03-08
     - version:
-        name: Exchange Server 2013 CU23 Jan22SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Jan22SU'
         short_code: 15.0.1497.28
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631" data-linktype="external">Exchange
-          Server 2013 CU23 Jan22SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5008631"
+          data-linktype="external">Exchange Server 2013 CU23 Jan22SU</a>'
       latest_release: 2022-01-11
     - version:
-        name: Exchange Server 2013 CU23 Nov21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Nov21SU'
         short_code: 15.0.1497.26
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409" data-linktype="external">Exchange
-          Server 2013 CU23 Nov21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007409"
+          data-linktype="external">Exchange Server 2013 CU23 Nov21SU</a>'
       latest_release: 2021-11-09
     - version:
-        name: Exchange Server 2013 CU23 Oct21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Oct21SU'
         short_code: 15.0.1497.24
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007011" data-linktype="external">Exchange
-          Server 2013 CU23 Oct21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5007011"
+          data-linktype="external">Exchange Server 2013 CU23 Oct21SU</a>'
       latest_release: 2021-10-12
     - version:
-        name: Exchange Server 2013 CU23 Jul21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Jul21SU'
         short_code: 15.0.1497.23
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004778" data-linktype="external">Exchange
-          Server 2013 CU23 Jul21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5004778"
+          data-linktype="external">Exchange Server 2013 CU23 Jul21SU</a>'
       latest_release: 2021-07-13
     - version:
-        name: Exchange Server 2013 CU23 May21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 May21SU'
         short_code: 15.0.1497.18
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435" data-linktype="external">Exchange
-          Server 2013 CU23 May21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5003435"
+          data-linktype="external">Exchange Server 2013 CU23 May21SU</a>'
       latest_release: 2021-05-11
     - version:
-        name: Exchange Server 2013 CU23 Apr21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Apr21SU'
         short_code: 15.0.1497.15
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779" data-linktype="external">Exchange
-          Server 2013 CU23 Apr21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5001779"
+          data-linktype="external">Exchange Server 2013 CU23 Apr21SU</a>'
       latest_release: 2021-04-13
     - version:
-        name: Exchange Server 2013 CU23 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU23 Mar21SU'
         short_code: 15.0.1497.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2013 CU23 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2013 CU23 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2013 CU23
@@ -1113,11 +1127,11 @@
   - name: Exchange Server 2013 CU22
     children:
     - version:
-        name: Exchange Server 2013 CU22 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU22 Mar21SU'
         short_code: 15.0.1473.6
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2013 CU22 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2013 CU22 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2013 CU22
@@ -1128,11 +1142,11 @@
   - name: Exchange Server 2013 CU21
     children:
     - version:
-        name: Exchange Server 2013 CU21 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 CU21 Mar21SU'
         short_code: 15.0.1395.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2013 CU21 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2013 CU21 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2013 CU21
@@ -1271,11 +1285,11 @@
   - name: Exchange Server 2013 SP1
     children:
     - version:
-        name: Exchange Server 2013 SP1 Mar21SU
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2013 SP1 Mar21SU'
         short_code: 15.0.847.64
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871" data-linktype="external">Exchange
-          Server 2013 SP1 Mar21SU</a>
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5000871"
+          data-linktype="external">Exchange Server 2013 SP1 Mar21SU</a>'
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2013 SP1
