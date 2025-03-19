@@ -456,7 +456,7 @@ class Trees:
 		for vers_name, cus in supported_cus.items():
 			version = by_version.get(vers_name)
 			if version is None:
-				pass
+				continue
 			version.alive = True
 			for cu in cus:
 				for subversion in version.children:
