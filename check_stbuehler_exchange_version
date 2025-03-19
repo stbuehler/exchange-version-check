@@ -418,7 +418,7 @@ def parse_supported_cu_versions(args: argparse.Namespace) -> dict[str, list[str]
 			break
 
 	def clean_html(html: str) -> str:
-		html = re.sub('<\s*br\s*/?>', '\n', html)
+		html = re.sub(r'<\s*br\s*/?>', '\n', html)
 		html = re.sub(r'[ \t]*(?:<.*?>)+[ \t]*', ' ', html)
 		return html.strip()
 
