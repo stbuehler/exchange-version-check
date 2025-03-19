@@ -403,6 +403,12 @@ class TreeBuilder(yaml.YAMLObject):
 
 
 def parse_supported_cu_versions(args: argparse.Namespace) -> dict[str, list[str]]:
+	# split into `<h2>` sections and look for table in
+	# `<h2 id="supported-versions-and-builds">Supported versions and builds</h2>`
+	#
+	# First column should contain "long name" of the version, second column one or
+	# multiple `CU\d+` names referencing the currently supported CUs.
+
 	ms_release_list = requests.get(args.supported_cu_source)
 	versions = {}
 
