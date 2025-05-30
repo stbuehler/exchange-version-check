@@ -5,13 +5,20 @@
       data-linktype="external">Exchange Server 2019 CU15 (2025H1)</a>
     children:
     - version:
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU15 May25HU'
+        short_code: 15.2.1748.26
+        date: 2025-05-29
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5057651"
+          data-linktype="external">Exchange Server 2019 CU15 May25HU</a>'
+      latest_release: 2025-05-29
+      alive: true
+    - version:
         name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU15 Apr25HU'
         short_code: 15.2.1748.24
         date: 2025-04-18
         html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5050672"
           data-linktype="external">Exchange Server 2019 CU15 Apr25HU</a>'
       latest_release: 2025-04-18
-      alive: true
     - version:
         name: Exchange Server 2019 CU15 (2025H1)
         short_code: 15.2.1748.10
@@ -19,12 +26,20 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=106402"
           data-linktype="external">Exchange Server 2019 CU15 (2025H1)</a>
       latest_release: 2025-02-10
-    latest_release: 2025-04-18
+    latest_release: 2025-05-29
     alive: true
   - name: Exchange Server 2019 CU14 (2024H1)
     html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105878"
       data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
     children:
+    - version:
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU14 May25HU'
+        short_code: 15.2.1544.27
+        date: 2025-05-29
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5057652"
+          data-linktype="external">Exchange Server 2019 CU14 May25HU</a>'
+      latest_release: 2025-05-29
+      alive: true
     - version:
         name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU14 Apr25HU'
         short_code: 15.2.1544.25
@@ -32,7 +47,6 @@
         html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5050673"
           data-linktype="external">Exchange Server 2019 CU14 Apr25HU</a>'
       latest_release: 2025-04-18
-      alive: true
     - version:
         name: '&nbsp;&nbsp;&nbsp;Exchange Server 2019 CU14 Nov24SUv2'
         short_code: 15.2.1544.14
@@ -68,7 +82,7 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105878"
           data-linktype="external">Exchange Server 2019 CU14 (2024H1)</a>
       latest_release: 2024-02-13
-    latest_release: 2025-04-18
+    latest_release: 2025-05-29
     alive: true
   - name: Exchange Server 2019 CU13 (2023H1)
     html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105180"
@@ -559,7 +573,7 @@
         date: 2018-07-24
       latest_release: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2025-04-18
+  latest_release: 2025-05-29
   alive: true
 - name: Exchange Server 2016
   children:
@@ -568,13 +582,20 @@
       data-linktype="external">Exchange Server 2016 CU23 (2022H1)</a>
     children:
     - version:
+        name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 May25HU'
+        short_code: 15.1.2507.57
+        date: 2025-05-29
+        html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5057653"
+          data-linktype="external">Exchange Server 2016 CU23 May25HU</a>'
+      latest_release: 2025-05-29
+      alive: true
+    - version:
         name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Apr25HU'
         short_code: 15.1.2507.55
         date: 2025-04-18
         html_name: '&nbsp;&nbsp;&nbsp;<a href="https://support.microsoft.com/help/5050674"
           data-linktype="external">Exchange Server 2016 CU23 Apr25HU</a>'
       latest_release: 2025-04-18
-      alive: true
     - version:
         name: '&nbsp;&nbsp;&nbsp;Exchange Server 2016 CU23 Nov24SUv2'
         short_code: 15.1.2507.44
@@ -694,7 +715,7 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=104132"
           data-linktype="external">Exchange Server 2016 CU23 (2022H1)</a>
       latest_release: 2022-04-20
-    latest_release: 2025-04-18
+    latest_release: 2025-05-29
     alive: true
   - name: Exchange Server 2016 CU22
     html_name: <a href="https://www.microsoft.com/download/details.aspx?id=103478"
@@ -1099,7 +1120,7 @@
         date: 2015-07-22
       latest_release: 2015-07-22
     latest_release: 2015-10-01
-  latest_release: 2025-04-18
+  latest_release: 2025-05-29
   alive: true
 - name: Exchange Server 2013
   children:
