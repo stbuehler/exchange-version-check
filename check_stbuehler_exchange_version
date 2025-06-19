@@ -495,7 +495,7 @@ def run_pages(args: argparse.Namespace):
 	trees = Trees.load(args)
 
 	with open('versions.yaml', mode='w') as f:
-		yaml.dump(trees.trees, stream=f)
+		yaml.dump(trees.trees, stream=f, width=300)
 
 	with open('versions.html', mode='w') as f:
 		f.write("""<!DOCTYPE html>
