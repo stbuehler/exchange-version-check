@@ -62,7 +62,7 @@ class HtmlTable:
 			yield HtmlTable(html=table)
 
 
-_MATCH_HTML_LINK = re.compile(r'<a(?:\s+(?:href="(.*)"|\S+))*>(.*)</a>', re.DOTALL|re.IGNORECASE)
+_MATCH_HTML_LINK = re.compile(r'<a(?:\s+(?:href="([^"]*)"|[^\s>]+))*>(.*)</a>', re.DOTALL|re.IGNORECASE)
 # support simple links
 def from_html(orig_html: str) -> typing.Tuple[str, typing.Optional[str]]:
 	plain = ''
