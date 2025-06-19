@@ -135,6 +135,8 @@ class Version:
 		assert len(cols) >= 3, f"Unexpected table row: {row!r}"
 		if not cols[0] and not cols[1] and not cols[2]:
 			return None
+		if cols[1].startswith("Not yet") or cols[2].startswith("Not yet"):
+			return None
 		name, html_name = from_html(cols[0].strip())
 		date_str, date = Version._parse_date(cols[1])
 		# remove leading zeroes at the beginning and after each '.'
