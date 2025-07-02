@@ -1,5 +1,15 @@
 - name: Exchange Server 2019
   children:
+  - name: Exchange Server SE RTM
+    html_name: <a href="https://www.microsoft.com/download/details.aspx?id=108244">Exchange Server SE RTM</a>
+    children:
+    - version:
+        name: Exchange Server SE RTM
+        short_code: 15.2.2562.17
+        date: 2025-07-01
+        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=108244">Exchange Server SE RTM</a>
+      latest_release: 2025-07-01
+    latest_release: 2025-07-01
   - name: Exchange Server 2019 CU15
     children:
     - version:
@@ -499,7 +509,7 @@
         date: 2018-07-24
       latest_release: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2025-05-29
+  latest_release: 2025-07-01
   alive: true
 - name: Exchange Server 2016
   children:
