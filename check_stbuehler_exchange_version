@@ -336,25 +336,14 @@ class TreeBuilder(yaml.YAMLObject):
 			self.children[key] = node
 		return node
 
-	def _insert_root(self, path: typing.Sequence[int], name: str) -> TreeBuilder:
+	def _insert(self, path: typing.Sequence[int], version: Version):
 		if len(path) == 0:
-			self.name = name
-			self.is_root = True
-			return self
-		key = path[0]
-		path = path[1:]
-		return self._subnode(key)._insert_root(path, name)
-
-	def _insert(self, path: typing.Sequence[int], version: Version, *, found_root: bool = False):
-		if len(path) == 0:
-			assert found_root, f'Version inserted above roots'
 			assert self.version is None, f'Version already in tree: {version} ({self.version})'
 			self.version = version
 			return
-		found_root = found_root or self.is_root
 		key = path[0]
 		path = path[1:]
-		self._subnode(key)._insert(path, version, found_root=found_root)
+		self._subnode(key)._insert(path, version)
 
 	def _build_root_trees(self) -> typing.Iterable[Tree]:
 		if self.is_root:
@@ -380,25 +369,61 @@ class TreeBuilder(yaml.YAMLObject):
 		tree._fix_tree()
 		return tree
 
+
+@dataclasses.dataclass
+class RootTrees(yaml.YAMLObject):
+	@staticmethod
+	def _default_roots() -> dict[tuple[int, ...], list[tuple[str, TreeBuilder]]]:
+		CONFIG = {
+			(15, 2): ['Exchange Server SE', 'Exchange Server 2019'],
+			(15, 1): ['Exchange Server 2016'],
+			(15, 0): ['Exchange Server 2013'],
+			(14,): ['Exchange Server 2010'],
+			(8,): ['Exchange Server 2007'],
+			(6, 5): ['Exchange Server 2003'],
+			(6, 0): ['Exchange 2000 Server'],
+			(5, 5): ['Exchange Server 5.5'],
+			(5, 0): ['Exchange Server 5.0'],
+			(4, 0): ['Exchange Server 4.0'],
+			(): ['Unknown version'],
+		}
+		return {
+			version: [
+				(name, TreeBuilder(path=version, name=name, is_root=True))
+				for name in names
+			]
+			for version, names in CONFIG.items()
+		}
+
+	roots: dict[tuple[int, ...], tuple[str, TreeBuilder]] = dataclasses.field(default_factory=_default_roots)
+
+	def _insert(self, path: typing.Sequence[int], version: Version):
+		for num in reversed(range(len(path))):
+			tbs = self.roots.get(tuple(path[:num]))
+			if tbs is None:
+				continue
+			if len(tbs) == 1:
+				tbs[0][1]._insert(path[num:], version)
+				return
+			# multiple versions in same "tree" - match using the name
+			for name, tb in tbs:
+				if version.name.startswith(name):
+					tb._insert(path[num:], version)
+					return
+
+		raise RuntimeError("unknown version should have been caught by config")
+
+	def _build_root_trees(self) -> typing.Iterable[Tree]:
+		for tbs in self.roots.values():
+			for _, tb in tbs:
+				yield from tb._build_root_trees()
+
 	@staticmethod
 	def from_versions(versions: typing.Iterable[Version]) -> 'Tree':
-		root = TreeBuilder(path=())
-		for (path, name) in (
-			((15, 2), 'Exchange Server 2019'),
-			((15, 1), 'Exchange Server 2016'),
-			((15, 0), 'Exchange Server 2013'),
-			((14,), 'Exchange Server 2010'),
-			((8,), 'Exchange Server 2007'),
-			((6, 5), 'Exchange Server 2003'),
-			((6, 0), 'Exchange 2000 Server'),
-			((5, 5), 'Exchange Server 5.5'),
-			((5, 0), 'Exchange Server 5.0'),
-			((4, 0), 'Exchange Server 4.0'),
-		):
-			root._insert_root(path, name)
+		root_tress = RootTrees()
 		for version in versions:
-			root._insert(version.num_code, version)
-		children = list(root._build_root_trees())
+			root_tress._insert(version.num_code, version)
+		children = list(root_tress._build_root_trees())
 		root = Tree(path=(), name='', html_name=None, version=None, children=children)
 		for c in children:
 			c.parent = root
@@ -482,7 +507,7 @@ class Trees:
 		# assume content is utf-8 (html meta), although not specified in http content-type:
 		versions = list(Version.scan(ms_release_list.content.decode('utf-8')))
 
-		root = TreeBuilder.from_versions(versions)
+		root = RootTrees.from_versions(versions)
 		trees = Trees(trees=root.children, versions={v.short_code: v for v in versions})
 		if supported_cus:
 			trees.calc_alive_supported_cus(supported_cus)
