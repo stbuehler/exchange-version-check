@@ -410,7 +410,7 @@ def parse_supported_cu_versions(args: argparse.Namespace) -> dict[str, list[str]
 	# `<h2 id="supported-versions-and-builds">Supported versions and builds</h2>`
 	#
 	# First column should contain "long name" of the version, second column one or
-	# multiple `CU\d+` names referencing the currently supported CUs.
+	# multiple `CU\d+|RTM` names referencing the currently supported CUs.
 
 	ms_release_list = requests.get(args.supported_cu_source)
 	versions = {}
@@ -435,7 +435,7 @@ def parse_supported_cu_versions(args: argparse.Namespace) -> dict[str, list[str]
 	for row in table:
 		cells = [clean_html(s) for s in row]
 		exch_version = cells[0]
-		supported_cus = re.findall(r'\bCU\d+\b', cells[1])
+		supported_cus = re.findall(r'\bCU\d+|RTM\b', cells[1])
 		versions[exch_version] = supported_cus
 	return versions
 
