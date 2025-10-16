@@ -41,7 +41,6 @@
         date: 2025-10-14
         html_name: <a href="https://support.microsoft.com/help/5066367">Exchange Server 2019 CU15 Oct25SU</a>
       latest_release: 2025-10-14
-      alive: true
     - version:
         name: Exchange Server 2019 CU15 Sep25HU
         short_code: 15.2.1748.37
@@ -73,7 +72,6 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=106402">Exchange Server 2019 CU15 (2025H1)</a>
       latest_release: 2025-02-10
     latest_release: 2025-10-14
-    alive: true
   - name: Exchange Server 2019 CU14
     children:
     - version:
@@ -82,7 +80,6 @@
         date: 2025-10-14
         html_name: <a href="https://support.microsoft.com/help/5066368">Exchange Server 2019 CU14 Oct25SU</a>
       latest_release: 2025-10-14
-      alive: true
     - version:
         name: Exchange Server 2019 CU14 Sep25HU
         short_code: 15.2.1544.34
@@ -138,7 +135,6 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105878">Exchange Server 2019 CU14 (2024H1)</a>
       latest_release: 2024-02-13
     latest_release: 2025-10-14
-    alive: true
   - name: Exchange Server 2019 CU13
     children:
     - version:
@@ -569,7 +565,6 @@
       latest_release: 2018-07-24
     latest_release: 2018-07-24
   latest_release: 2025-10-14
-  alive: true
 - name: Exchange Server 2016
   children:
   - name: Exchange Server 2016 CU23
@@ -580,7 +575,6 @@
         date: 2025-10-14
         html_name: <a href="https://support.microsoft.com/help/5066369">Exchange Server 2016 CU23 Oct25SU</a>
       latest_release: 2025-10-14
-      alive: true
     - version:
         name: Exchange Server 2016 CU23 Sep25HU
         short_code: 15.1.2507.59
@@ -708,7 +702,6 @@
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=104132">Exchange Server 2016 CU23 (2022H1)</a>
       latest_release: 2022-04-20
     latest_release: 2025-10-14
-    alive: true
   - name: Exchange Server 2016 CU22
     children:
     - version:
@@ -1080,7 +1073,6 @@
       latest_release: 2015-07-22
     latest_release: 2015-10-01
   latest_release: 2025-10-14
-  alive: true
 - name: Exchange Server 2013
   children:
   - name: Exchange Server 2013 CU23
