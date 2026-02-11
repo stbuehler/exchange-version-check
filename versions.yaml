@@ -3,12 +3,18 @@
   - name: Exchange Server SE RTM
     children:
     - version:
+        name: Exchange Server SE RTM Feb26SU
+        short_code: 15.2.2562.37
+        date: 2026-02-10
+        html_name: <a href="https://support.microsoft.com/help/5074992">Exchange Server SE RTM Feb26SU</a>
+      latest_release: 2026-02-10
+      alive: true
+    - version:
         name: Exchange Server SE RTM Dec25SU
         short_code: 15.2.2562.35
         date: 2025-12-09
         html_name: <a href="https://support.microsoft.com/help/5071876">Exchange Server SE RTM Dec25SU</a>
       latest_release: 2025-12-09
-      alive: true
     - version:
         name: Exchange Server SE RTM Oct25SU
         short_code: 15.2.2562.29
@@ -33,14 +39,20 @@
         date: 2025-07-01
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=108244">Exchange Server SE RTM</a>
       latest_release: 2025-07-01
-    latest_release: 2025-12-09
+    latest_release: 2026-02-10
     alive: true
-  latest_release: 2025-12-09
+  latest_release: 2026-02-10
   alive: true
 - name: Exchange Server 2019
   children:
   - name: Exchange Server 2019 CU15
     children:
+    - version:
+        name: Exchange Server 2019 CU15 Feb26SU
+        short_code: 15.2.1748.43
+        date: 2026-02-10
+        html_name: <a href="https://support.microsoft.com/help/5074993">Exchange Server 2019 CU15 Feb26SU</a>
+      latest_release: 2026-02-10
     - version:
         name: Exchange Server 2019 CU15 Dec25SU
         short_code: 15.2.1748.42
@@ -83,9 +95,15 @@
         date: 2025-02-10
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=106402">Exchange Server 2019 CU15 (2025H1)</a>
       latest_release: 2025-02-10
-    latest_release: 2025-12-09
+    latest_release: 2026-02-10
   - name: Exchange Server 2019 CU14
     children:
+    - version:
+        name: Exchange Server 2019 CU14 Feb26SU
+        short_code: 15.2.1544.39
+        date: 2026-02-10
+        html_name: <a href="https://support.microsoft.com/help/5074994">Exchange Server 2019 CU14 Feb26SU</a>
+      latest_release: 2026-02-10
     - version:
         name: Exchange Server 2019 CU14 Dec25SU
         short_code: 15.2.1544.37
@@ -152,7 +170,7 @@
         date: 2024-02-13
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105878">Exchange Server 2019 CU14 (2024H1)</a>
       latest_release: 2024-02-13
-    latest_release: 2025-12-09
+    latest_release: 2026-02-10
   - name: Exchange Server 2019 CU13
     children:
     - version:
@@ -582,11 +600,17 @@
         date: 2018-07-24
       latest_release: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2025-12-09
+  latest_release: 2026-02-10
 - name: Exchange Server 2016
   children:
   - name: Exchange Server 2016 CU23
     children:
+    - version:
+        name: Exchange Server 2016 CU23 Feb26SU
+        short_code: 15.1.2507.66
+        date: 2026-02-10
+        html_name: <a href="https://support.microsoft.com/help/5074995">Exchange Server 2016 CU23 Feb26SU</a>
+      latest_release: 2026-02-10
     - version:
         name: Exchange Server 2016 CU23 Dec25SU
         short_code: 15.1.2507.63
@@ -725,7 +749,7 @@
         date: 2022-04-20
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=104132">Exchange Server 2016 CU23 (2022H1)</a>
       latest_release: 2022-04-20
-    latest_release: 2025-12-09
+    latest_release: 2026-02-10
   - name: Exchange Server 2016 CU22
     children:
     - version:
@@ -1096,7 +1120,7 @@
         date: 2015-07-22
       latest_release: 2015-07-22
     latest_release: 2015-10-01
-  latest_release: 2025-12-09
+  latest_release: 2026-02-10
 - name: Exchange Server 2013
   children:
   - name: Exchange Server 2013 CU23
@@ -1943,26 +1967,26 @@
           date: 2016-06-21
         latest_release: 2016-06-21
       latest_release: 2016-06-21
-    - name: Update Rollup 19 forExchange Server 2007 SP3
+    - name: Update Rollup 19 for Exchange Server 2007 SP3
       children:
       - version:
-          name: Update Rollup 19 forExchange Server 2007 SP3
+          name: Update Rollup 19 for Exchange Server 2007 SP3
           short_code: 8.3.459.0
           date: 2016-03-15
         latest_release: 2016-03-15
       latest_release: 2016-03-15
-    - name: Update Rollup 18 forExchange Server 2007 SP3
+    - name: Update Rollup 18 for Exchange Server 2007 SP3
       children:
       - version:
-          name: Update Rollup 18 forExchange Server 2007 SP3
+          name: Update Rollup 18 for Exchange Server 2007 SP3
           short_code: 8.3.445.0
           date_str: 2015-12
         latest_release_str: 2015-12
       latest_release_str: 2015-12
-    - name: Update Rollup 17 forExchange Server 2007 SP3
+    - name: Update Rollup 17 for Exchange Server 2007 SP3
       children:
       - version:
-          name: Update Rollup 17 forExchange Server 2007 SP3
+          name: Update Rollup 17 for Exchange Server 2007 SP3
           short_code: 8.3.417.1
           date: 2015-06-17
         latest_release: 2015-06-17
