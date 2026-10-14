@@ -3,12 +3,18 @@
   - name: Exchange Server SE RTM
     children:
     - version:
+        name: Exchange Server SE RTM Oct26SU
+        short_code: 15.2.2562.56
+        date: 2026-10-13
+        html_name: <a href="https://support.microsoft.com/help/5128895">Exchange Server SE RTM Oct26SU</a>
+      latest_release: 2026-10-13
+      alive: true
+    - version:
         name: Exchange Server SE RTM Sep26SUv2
         short_code: 15.2.2562.53
         date: 2026-10-02
         html_name: <a href="https://support.microsoft.com/help/5129955">Exchange Server SE RTM Sep26SUv2</a>
       latest_release: 2026-10-02
-      alive: true
     - version:
         name: Exchange Server SE RTM Sep26SU
         short_code: 15.2.2562.49
@@ -75,14 +81,20 @@
         date: 2025-07-01
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=108244">Exchange Server SE RTM</a>
       latest_release: 2025-07-01
-    latest_release: 2026-10-02
+    latest_release: 2026-10-13
     alive: true
-  latest_release: 2026-10-02
+  latest_release: 2026-10-13
   alive: true
 - name: Exchange Server 2019
   children:
   - name: Exchange Server 2019 CU15
     children:
+    - version:
+        name: Exchange Server 2019 CU15 Oct26SU
+        short_code: 15.2.1748.55
+        date: 2026-10-13
+        html_name: <a href="https://support.microsoft.com/help/5128896">Exchange Server 2019 CU15 Oct26SU</a>
+      latest_release: 2026-10-13
     - version:
         name: Exchange Server 2019 CU15 Sep26SUv2
         short_code: 15.2.1748.53
@@ -161,9 +173,15 @@
         date: 2025-02-10
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=106402">Exchange Server 2019 CU15 (2025H1)</a>
       latest_release: 2025-02-10
-    latest_release: 2026-10-02
+    latest_release: 2026-10-13
   - name: Exchange Server 2019 CU14
     children:
+    - version:
+        name: Exchange Server 2019 CU14 Oct26SU
+        short_code: 15.2.1544.50
+        date: 2026-10-13
+        html_name: <a href="https://support.microsoft.com/help/5128897">Exchange Server 2019 CU14 Oct26SU</a>
+      latest_release: 2026-10-13
     - version:
         name: Exchange Server 2019 CU14 Sep26SUv2
         short_code: 15.2.1544.48
@@ -264,9 +282,9 @@
         name: Exchange Server 2019 CU14 (2024H1)
         short_code: 15.2.1544.4
         date: 2024-02-13
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105878">Exchange Server 2019 CU14 (2024H1)</a>
+        html_name: <a href="https://support.microsoft.com/help/5035606">Exchange Server 2019 CU14 (2024H1)</a>
       latest_release: 2024-02-13
-    latest_release: 2026-10-02
+    latest_release: 2026-10-13
   - name: Exchange Server 2019 CU13
     children:
     - version:
@@ -327,7 +345,7 @@
         name: Exchange Server 2019 CU13 (2023H1)
         short_code: 15.2.1258.12
         date: 2023-05-03
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=105180">Exchange Server 2019 CU13 (2023H1)</a>
+        html_name: <a href="https://support.microsoft.com/help/5020999">Exchange Server 2019 CU13 (2023H1)</a>
       latest_release: 2023-05-03
     latest_release: 2024-11-27
   - name: Exchange Server 2019 CU12
@@ -408,7 +426,7 @@
         name: Exchange Server 2019 CU12 (2022H1)
         short_code: 15.2.1118.7
         date: 2022-04-20
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=104131">Exchange Server 2019 CU12 (2022H1)</a>
+        html_name: <a href="https://support.microsoft.com/help/5011156">Exchange Server 2019 CU12 (2022H1)</a>
       latest_release: 2022-04-20
     latest_release: 2023-11-14
   - name: Exchange Server 2019 CU11
@@ -483,7 +501,7 @@
         name: Exchange Server 2019 CU11
         short_code: 15.2.986.5
         date: 2021-09-28
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=103477">Exchange Server 2019 CU11</a>
+        html_name: <a href="https://support.microsoft.com/help/5005334">Exchange Server 2019 CU11</a>
       latest_release: 2021-09-28
     latest_release: 2023-03-14
   - name: Exchange Server 2019 CU10
@@ -696,11 +714,17 @@
         date: 2018-07-24
       latest_release: 2018-07-24
     latest_release: 2018-07-24
-  latest_release: 2026-10-02
+  latest_release: 2026-10-13
 - name: Exchange Server 2016
   children:
   - name: Exchange Server 2016 CU23
     children:
+    - version:
+        name: Exchange Server 2016 CU23 Oct26SU
+        short_code: 15.1.2507.77
+        date: 2026-10-13
+        html_name: <a href="https://support.microsoft.com/help/5128898">Exchange Server 2016 CU23 Oct26SU</a>
+      latest_release: 2026-10-13
     - version:
         name: Exchange Server 2016 CU23 Sep26SUv2
         short_code: 15.1.2507.75
@@ -875,7 +899,7 @@
         date: 2022-04-20
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=104132">Exchange Server 2016 CU23 (2022H1)</a>
       latest_release: 2022-04-20
-    latest_release: 2026-10-02
+    latest_release: 2026-10-13
   - name: Exchange Server 2016 CU22
     children:
     - version:
@@ -930,7 +954,7 @@
         name: Exchange Server 2016 CU22
         short_code: 15.1.2375.7
         date: 2021-09-28
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=103478">Exchange Server 2016 CU22</a>
+        html_name: <a href="https://support.microsoft.com/help/5005333">Exchange Server 2016 CU22</a>
       latest_release: 2021-09-28
     latest_release: 2022-11-08
   - name: Exchange Server 2016 CU21
@@ -1246,7 +1270,7 @@
         date: 2015-07-22
       latest_release: 2015-07-22
     latest_release: 2015-10-01
-  latest_release: 2026-10-02
+  latest_release: 2026-10-13
 - name: Exchange Server 2013
   children:
   - name: Exchange Server 2013 CU23
@@ -1255,97 +1279,82 @@
         name: Exchange Server 2013 CU23 Mar23SU
         short_code: 15.0.1497.48
         date: 2023-03-14
-        html_name: <a href="https://support.microsoft.com/help/5024296">Exchange Server 2013 CU23 Mar23SU</a>
       latest_release: 2023-03-14
     - version:
         name: Exchange Server 2013 CU23 Feb23SU
         short_code: 15.0.1497.47
         date: 2023-02-14
-        html_name: <a href="https://support.microsoft.com/help/5023038">Exchange Server 2013 CU23 Feb23SU</a>
       latest_release: 2023-02-14
     - version:
         name: Exchange Server 2013 CU23 Jan23SU
         short_code: 15.0.1497.45
         date: 2023-01-10
-        html_name: <a href="https://support.microsoft.com/help/5022188">Exchange Server 2013 CU23 Jan23SU</a>
       latest_release: 2023-01-10
     - version:
         name: Exchange Server 2013 CU23 Nov22SU
         short_code: 15.0.1497.44
         date: 2022-11-08
-        html_name: <a href="https://support.microsoft.com/help/5019758">Exchange Server 2013 CU23 Nov22SU</a>
       latest_release: 2022-11-08
     - version:
         name: Exchange Server 2013 CU23 Oct22SU
         short_code: 15.0.1497.42
         date: 2022-10-11
-        html_name: <a href="https://support.microsoft.com/help/5019076">Exchange Server 2013 CU23 Oct22SU</a>
       latest_release: 2022-10-11
     - version:
         name: Exchange Server 2013 CU23 Aug22SU
         short_code: 15.0.1497.40
         date: 2022-08-09
-        html_name: <a href="https://support.microsoft.com/help/5015321">Exchange Server 2013 CU23 Aug22SU</a>
       latest_release: 2022-08-09
     - version:
         name: Exchange Server 2013 CU23 May22SU
         short_code: 15.0.1497.36
         date: 2022-05-10
-        html_name: <a href="https://support.microsoft.com/help/5014260">Exchange Server 2013 CU23 May22SU</a>
       latest_release: 2022-05-10
     - version:
         name: Exchange Server 2013 CU23 Mar22SU
         short_code: 15.0.1497.33
         date: 2022-03-08
-        html_name: <a href="https://support.microsoft.com/help/5010324">Exchange Server 2013 CU23 Mar22SU</a>
       latest_release: 2022-03-08
     - version:
         name: Exchange Server 2013 CU23 Jan22SU
         short_code: 15.0.1497.28
         date: 2022-01-11
-        html_name: <a href="https://support.microsoft.com/help/5008631">Exchange Server 2013 CU23 Jan22SU</a>
       latest_release: 2022-01-11
     - version:
         name: Exchange Server 2013 CU23 Nov21SU
         short_code: 15.0.1497.26
         date: 2021-11-09
-        html_name: <a href="https://support.microsoft.com/help/5007409">Exchange Server 2013 CU23 Nov21SU</a>
       latest_release: 2021-11-09
     - version:
         name: Exchange Server 2013 CU23 Oct21SU
         short_code: 15.0.1497.24
         date: 2021-10-12
-        html_name: <a href="https://support.microsoft.com/help/5007011">Exchange Server 2013 CU23 Oct21SU</a>
       latest_release: 2021-10-12
     - version:
         name: Exchange Server 2013 CU23 Jul21SU
         short_code: 15.0.1497.23
         date: 2021-07-13
-        html_name: <a href="https://support.microsoft.com/help/5004778">Exchange Server 2013 CU23 Jul21SU</a>
       latest_release: 2021-07-13
     - version:
         name: Exchange Server 2013 CU23 May21SU
         short_code: 15.0.1497.18
         date: 2021-05-11
-        html_name: <a href="https://support.microsoft.com/help/5003435">Exchange Server 2013 CU23 May21SU</a>
       latest_release: 2021-05-11
     - version:
         name: Exchange Server 2013 CU23 Apr21SU
         short_code: 15.0.1497.15
         date: 2021-04-13
-        html_name: <a href="https://support.microsoft.com/help/5001779">Exchange Server 2013 CU23 Apr21SU</a>
       latest_release: 2021-04-13
     - version:
         name: Exchange Server 2013 CU23 Mar21SU
         short_code: 15.0.1497.12
         date: 2021-03-02
-        html_name: <a href="https://support.microsoft.com/help/5000871">Exchange Server 2013 CU23 Mar21SU</a>
       latest_release: 2021-03-02
     - version:
         name: Exchange Server 2013 CU23
         short_code: 15.0.1497.2
         date: 2019-06-18
-        html_name: <a href="https://www.microsoft.com/download/details.aspx?id=58392">Exchange Server 2013 CU23</a>
+        html_name: <a href="https://support.microsoft.com/help/4489622">Exchange Server 2013 CU23</a>
       latest_release: 2019-06-18
     latest_release: 2023-03-14
   - name: Exchange Server 2013 CU22
@@ -1560,7 +1569,6 @@
           name: Update Rollup 32 for Exchange Server 2010 SP3
           short_code: 14.3.513.0
           date: 2021-03-02
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102774">Update Rollup 32 for Exchange Server 2010 SP3</a>
         latest_release: 2021-03-02
       latest_release: 2021-03-02
     - name: Update Rollup 31 for Exchange Server 2010 SP3
@@ -1569,7 +1577,6 @@
           name: Update Rollup 31 for Exchange Server 2010 SP3
           short_code: 14.3.509.0
           date: 2020-12-01
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=102519">Update Rollup 31 for Exchange Server 2010 SP3</a>
         latest_release: 2020-12-01
       latest_release: 2020-12-01
     - name: Update Rollup 30 for Exchange Server 2010 SP3
@@ -1578,7 +1585,6 @@
           name: Update Rollup 30 for Exchange Server 2010 SP3
           short_code: 14.3.496.0
           date: 2020-02-11
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=100910">Update Rollup 30 for Exchange Server 2010 SP3</a>
         latest_release: 2020-02-11
       latest_release: 2020-02-11
     - name: Update Rollup 29 for Exchange Server 2010 SP3
@@ -1587,7 +1593,6 @@
           name: Update Rollup 29 for Exchange Server 2010 SP3
           short_code: 14.3.468.0
           date: 2019-07-09
-          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/07/exchange2010-kb4509410-x64-en_89bf203b193215a3b78b37acf9e5dd579486b41d.cab">Update Rollup 29 for Exchange Server 2010 SP3</a>
         latest_release: 2019-07-09
       latest_release: 2019-07-09
     - name: Update Rollup 28 for Exchange Server 2010 SP3
@@ -1596,7 +1601,6 @@
           name: Update Rollup 28 for Exchange Server 2010 SP3
           short_code: 14.3.461.1
           date: 2019-06-07
-          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/05/exchange2010-kb4503028-x64-en_9d7dd6b4b1719c1ab46c733150af3ff88cc6a310.cab">Update Rollup 28 for Exchange Server 2010 SP3</a>
         latest_release: 2019-06-07
       latest_release: 2019-06-07
     - name: Update Rollup 27 for Exchange Server 2010 SP3
@@ -1605,7 +1609,6 @@
           name: Update Rollup 27 for Exchange Server 2010 SP3
           short_code: 14.3.452.0
           date: 2019-04-09
-          html_name: <a href="https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/secu/2019/03/exchange2010-kb4491413-x64-en_670ad64849aa7180ee6457aac2358ad16200b2de.cab">Update Rollup 27 for Exchange Server 2010 SP3</a>
         latest_release: 2019-04-09
       latest_release: 2019-04-09
     - name: Update Rollup 26 for Exchange Server 2010 SP3
@@ -1614,7 +1617,6 @@
           name: Update Rollup 26 for Exchange Server 2010 SP3
           short_code: 14.3.442.0
           date: 2019-02-12
-          html_name: <a href="https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2019/02/exchange2010-kb4487052-x64-en_da5f4eacaa548c75cc4055144d7221f115efd763.cab">Update Rollup 26 for Exchange Server 2010 SP3</a>
         latest_release: 2019-02-12
       latest_release: 2019-02-12
     - name: Update Rollup 25 for Exchange Server 2010 SP3
@@ -1623,7 +1625,6 @@
           name: Update Rollup 25 for Exchange Server 2010 SP3
           short_code: 14.3.435.0
           date: 2019-01-08
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57759">Update Rollup 25 for Exchange Server 2010 SP3</a>
         latest_release: 2019-01-08
       latest_release: 2019-01-08
     - name: Update Rollup 24 for Exchange Server 2010 SP3
@@ -1632,7 +1633,6 @@
           name: Update Rollup 24 for Exchange Server 2010 SP3
           short_code: 14.3.419.0
           date: 2018-09-05
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57306">Update Rollup 24 for Exchange Server 2010 SP3</a>
         latest_release: 2018-09-05
       latest_release: 2018-09-05
     - name: Update Rollup 23 for Exchange Server 2010 SP3
@@ -1641,7 +1641,6 @@
           name: Update Rollup 23 for Exchange Server 2010 SP3
           short_code: 14.3.417.1
           date: 2018-08-13
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57219">Update Rollup 23 for Exchange Server 2010 SP3</a>
         latest_release: 2018-08-13
       latest_release: 2018-08-13
     - name: Update Rollup 22 for Exchange Server 2010 SP3
@@ -1650,7 +1649,6 @@
           name: Update Rollup 22 for Exchange Server 2010 SP3
           short_code: 14.3.411.0
           date: 2018-06-19
-          html_name: <a href="https://www.microsoft.com/download/details.aspx?id=57065">Update Rollup 22 for Exchange Server 2010 SP3</a>
         latest_release: 2018-06-19
       latest_release: 2018-06-19
     - name: Update Rollup 21 for Exchange Server 2010 SP3
