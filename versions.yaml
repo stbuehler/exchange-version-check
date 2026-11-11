@@ -3,12 +3,18 @@
   - name: Exchange Server SE RTM
     children:
     - version:
+        name: Exchange Server SE RTM Nov26SU
+        short_code: 15.2.2562.57
+        date: 2026-11-10
+        html_name: <a href="https://support.microsoft.com/help/5133453">Exchange Server SE RTM Nov26SU</a>
+      latest_release: 2026-11-10
+      alive: true
+    - version:
         name: Exchange Server SE RTM Oct26SU
         short_code: 15.2.2562.56
         date: 2026-10-13
         html_name: <a href="https://support.microsoft.com/help/5128895">Exchange Server SE RTM Oct26SU</a>
       latest_release: 2026-10-13
-      alive: true
     - version:
         name: Exchange Server SE RTM Sep26SUv2
         short_code: 15.2.2562.53
@@ -81,9 +87,9 @@
         date: 2025-07-01
         html_name: <a href="https://www.microsoft.com/download/details.aspx?id=108244">Exchange Server SE RTM</a>
       latest_release: 2025-07-01
-    latest_release: 2026-10-13
+    latest_release: 2026-11-10
     alive: true
-  latest_release: 2026-10-13
+  latest_release: 2026-11-10
   alive: true
 - name: Exchange Server 2019
   children:
